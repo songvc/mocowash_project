@@ -1,9 +1,44 @@
+.nav-header {
+	height:50px;
+	background-color: red;	
+}
+
 nav {
-	background-color: red;
-	height:50pxs;
-	li {
-		list-style-type: none; 
-		display:inline;
+	height: 50px;
+
+	ul{
+		overflow: hidden;
+		text-align:center;
+		li{
+			display: inline-block;
+		}
+	}	
+
+}
+
+.nav-menu-button {
+	display: none;
+}
+
+.nav-expanded {
+	display: block;
+}
+
+a{
+	text-decoration: none;
+}
+
+@media (max-width: 480px){
+	nav ul li{
+		box-sizing:border-box;
+		width:100%;
+		padding: 15px;
+	}
+	.nav-menu-button {
+		display:block;
 	}
 
+	.nav-expanded {
+		display:none;
+	}
 }
