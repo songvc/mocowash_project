@@ -1,24 +1,47 @@
 header {
 	position:fixed;
+	height:50px;
 	width:100%;
+	font-size:20px;
+
+}
+
+.logo {
+	padding-top:10px;
+	padding-left: 10px;
+	float:left;
+	color:black;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 nav {
-	height: 50px;
-	.logo {
-		float:left;
-	}
+	padding-top:10px;
 	ul {
 		overflow: hidden;
 		text-align:center;
 		li {
 			display: inline-block;
+			width:15%;
 
+			a {
+				// background-color: white;
+				color:white!important;
+				text-decoration: none;
+				&:visited {
+					color:#00FF00;
+					text-decoration:none;
+				}
+				&:hover {
+					color: white;
+					opacity: 0.75;
+					transition: opacity 0.2s linear,color 0.2s linear;
+				}
+				&:active {
+					color:#0000FF;
+				}
+			}
 		}
-		a {
-			
-			text-decoration: none;
-		}
+
 	}
 }
 
@@ -29,9 +52,11 @@ nav {
 
 @media (max-width: 480px) {
 	 /* Move nav off screen, setup transitions */
-
 	header {
 		background-color: white;
+	}
+	.logo {
+		display:none;
 	}
 	nav {
 		width: 70%;
@@ -39,40 +64,35 @@ nav {
 		left: -70%;
 		top: 0;
 		height: 100%;
-			.logo {
-				display:none;
-			}
+		overflow: inherit;
 	}
-
 	nav {
-		background-color: #3a4043;
-
 		ul {
 			i {
 				color:black;
 			}
-
 			li {
-				box-sizing:border-box;
+				border-bottom: 1px black solid;
 				width:100%;
 				margin-top:5%;
 				margin-bottom:5%;
+				color: black;
+				a {
+					// color: black!important;
+				}
 			}
 		}
 	}
-
 	.fa-bars{
 		color: black;
 		margin: 2%;
 	}
-
 	.fa-times{
 		margin: 2%;
 	}
 	.open-panel, .close-panel {
 		display: inline;
 	}
-
 	.openNav .top-container {
 		left: 0;
 		-webkit-transform: translate3d(70%, 0, 0);

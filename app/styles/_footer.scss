@@ -1,4 +1,17 @@
 footer{
-	height:300px;
+	height:350px;
 	background-color:#252525;
+}
+
+.footer-bottom {
+	color:white;
+	text-align: center;
+
+	hr {
+		width:80%;
+	}
+	p {
+		color:#82888a;
+		margin:0;
+	}
 }
