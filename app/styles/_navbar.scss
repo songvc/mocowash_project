@@ -3,14 +3,15 @@ header {
 	height:50px;
 	width:100%;
 	font-size:20px;
-
+	// background-color: #8CC542;
+	// opacity: .5;
 }
 
 .logo {
+	color:black;
 	padding-top:10px;
 	padding-left: 10px;
 	float:left;
-	color:black;
 	font-family: 'Ubuntu', sans-serif;
 }
 
@@ -21,7 +22,7 @@ nav {
 		text-align:center;
 		li {
 			display: inline-block;
-			width:15%;
+			width:100px;
 
 			a {
 				// background-color: white;
@@ -58,6 +59,7 @@ nav {
 	.logo {
 		display:none;
 	}
+
 	nav {
 		width: 70%;
 		position: absolute;
@@ -65,14 +67,12 @@ nav {
 		top: 0;
 		height: 100%;
 		overflow: inherit;
-	}
-	nav {
 		ul {
 			i {
 				color:black;
 			}
 			li {
-				border-bottom: 1px black solid;
+				border-bottom: 1px white solid;
 				width:100%;
 				margin-top:5%;
 				margin-bottom:5%;
@@ -85,7 +85,7 @@ nav {
 	}
 	.fa-bars{
 		color: black;
-		margin: 2%;
+		margin: 1.5%;
 	}
 	.fa-times{
 		margin: 2%;

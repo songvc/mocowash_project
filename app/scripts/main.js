@@ -14,9 +14,9 @@ $(document).ready(function(){
 			var currentTop = $(window).scrollTop();
 
 			if (currentTop < this.previousTop) {
-				$("header").show();
+				$(".header").show();
 			} else {
-				$("header").hide();
+				$(".header").hide();
 			}
 			this.previousTop = currentTop;
 		});

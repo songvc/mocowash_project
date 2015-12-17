@@ -1,17 +1,41 @@
-footer{
+footer {
 	height:350px;
 	background-color:#252525;
+	text-align: center;
 }
 
 .footer-bottom {
 	color:white;
-	text-align: center;
 
+	h2 {
+		margin:0;
+	}
+
+	ul {
+		li {
+			display:inline-block;
+
+			a {
+				color:white;
+				display: block;
+		    height: 36px;
+		    width: 36px;
+		    border-width: 1px;
+		    border-style: solid;
+		    border-radius: 50%;
+				text-align: center;
+				i {
+					line-height:2.3;
+				}
+			}
+		}
+	}
 	hr {
-		width:80%;
+		width:50%;
+
 	}
 	p {
-		color:#82888a;
 		margin:0;
+		color:#82888a;
 	}
 }

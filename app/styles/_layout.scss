@@ -11,7 +11,24 @@ body {
   margin: 0;
   padding: 0;
   background-color: #EDEFED;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Helvetica', sans-serif;
+}
+
+a {
+  color:white;
+  text-decoration: none;
+  &:visited {
+    color:#00FF00;
+    text-decoration:none;
+  }
+  &:hover {
+    color: white;
+    opacity: 0.75;
+    transition: opacity 0.2s linear,color 0.2s linear;
+  }
+  &:active {
+    color:#0000FF;
+  }
 }
 
 .container {

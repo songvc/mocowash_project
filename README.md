@@ -1,3 +1,5 @@
 # mocowash_project
 
-Mobile E-Commerce Website 
+Responsive Mobile E-Commerce Website
+
+No Bootstrap/Vanilla CSS
