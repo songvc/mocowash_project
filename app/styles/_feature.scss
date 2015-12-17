@@ -1,4 +1,14 @@
+
 .feature{
+	// height:500px;
+	// background-color: yellow;
+	overflow: auto;
+}
+
+section {
+	width:24%;
 	height:500px;
-	background-color: yellow;
+	border: black 1px solid;
+	float:left;
+	text-align: center;
 }

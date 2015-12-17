@@ -1,8 +1,17 @@
 $font-family: sans-serif;
-body{
-	font-family: font-family;
+
+body {
+  border: black solid 0.5px;
 }
 
-.container{
-	width:100%;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EDEFED;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	width: 700px;
+	margin:auto;
 }
