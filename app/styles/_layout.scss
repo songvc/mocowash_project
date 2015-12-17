@@ -1,5 +1,12 @@
 $font-family: sans-serif;
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   border: black solid 0.5px;
 }
@@ -12,6 +19,6 @@ body {
 }
 
 .container {
-	width: 700px;
+	width: 1000px;
 	margin:auto;
 }

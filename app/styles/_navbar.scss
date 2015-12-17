@@ -1,5 +1,6 @@
 header {
-	background-color: white;
+	position:fixed;
+	width:100%;
 }
 
 nav {
@@ -15,6 +16,7 @@ nav {
 
 		}
 		a {
+			
 			text-decoration: none;
 		}
 	}
@@ -71,7 +73,7 @@ nav {
 		display: inline;
 	}
 
-	.openNav .container {
+	.openNav .top-container {
 		left: 0;
 		-webkit-transform: translate3d(70%, 0, 0);
 		-moz-transform: translate3d(70%, 0, 0);
@@ -83,7 +85,7 @@ nav {
 		-o-transition: -o-transform 500ms ease;
 		transition: transform 500ms ease;
 	}
-	.container {
+	.top-container {
 		left: 0;
 		-webkit-transform: translate3d(0, 0, 0);
 		-moz-transform: translate3d(0, 0, 0);
