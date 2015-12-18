@@ -24,13 +24,6 @@
 		float:left;
 		height:400px;
 
-		img {
-			text-align: center;
-			height:100px;
-			weight:100px;
-			color:white;
-		}
-
 		h1 {
 			padding-top:5px;
 			text-transform: uppercase;
@@ -38,7 +31,11 @@
 		hr {
 			border-width: 1px;
 		}
+		.icon {
+			height:100px;
+			weight:100px;
 
+		}
 	}
 }
 
@@ -72,12 +69,12 @@
 		height:300px;
 		background-color: white;
 		float:left;
-		img {
-			text-align: center;
+
+		.icon {
 			height:100px;
 			weight:100px;
-			color:white;
 		}
+
 	}
 }
 

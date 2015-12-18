@@ -1,18 +1,26 @@
 
 .jumbotron {
+	padding-top: 200px;
+	text-align: center;
 	.jumbotron-content {
-		text-align: center;
-		color: white;
-		padding-top:200px;
-
+		display: inline-block;
+		width:80%;
+		background-color: rgba(0,0,0,0.3);
+		padding:20px;
 		h1 {
 			margin:0;
 			font-size: 36px;
 			text-transform: uppercase;
+			color: white;
 		}
 		button {
-			margin-top: 80px;
+			margin-top: 60px;
+			background-color:rgba(51,122,183,0.8);
+			&:hover {
+				background-color:rgba(51,122,183,0.3);
+			}
 		}
+
 	}
 }
 
@@ -29,10 +37,19 @@
 	.jumbotron-image {
 		min-height:70vh;
 	}
-
-	.jumbotron-content {
-		h1 {
-			font-size: 20px;
+	.jumbotron {
+		padding-top: 170px;
+		.jumbotron-content {
+			width:80%;
+			h1 {
+				font-size: 20px;
+			}
+			button {
+				font-size:16px;
+				margin-top: 30px;
+				width: 130px;
+			}
 		}
 	}
+
 }
