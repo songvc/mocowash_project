@@ -1,29 +1,85 @@
-.feature {
-	overflow: auto;
-	width:100%
-}
 
 .about {
+	overflow:auto;
+	background-color: #6EB5DC;
+}
+.about {
+	text-align: center;
+	padding-top: 25px;
+	color:white;
+
+	hr {
+		width:50%;
+		margin: 10px auto;
+		border-width:3px;
+		border-color: white;
+	}
+
+	h2 {
+		margin:0;
+	}
+	section {
+		width:33.33333%;
+		padding:25px 10px 10px 10px;
+		float:left;
+		height:400px;
+
+		img {
+			text-align: center;
+			height:100px;
+			weight:100px;
+			color:white;
+		}
+
+		h1 {
+			padding-top:5px;
+			text-transform: uppercase;
+		}
+		hr {
+			border-width: 1px;
+		}
+
+	}
+}
+
+.service {
+	overflow: auto;
+	width:100%;
+	text-align: center;
+
+}
+
+.service {
+	padding-top: 25px;
+
+	hr {
+		width:50%;
+		margin: 10px auto;
+		border-width:3px;
+		border-color: #6EB5DC;
+	}
+
+	h2 {
+		text-align: center;
+		margin:0;
+		color:#6EB5DC;
+	}
+
 	section {
 		margin: 1%;
 		width:31.33333%;
 		padding:10px;
-		float:left;
-		height:300px;
-		background-color: white;
-	}
-}
-.feature {
-	section {
-		margin: 1%;
-		width:23%;
-		padding:10px;
 		height:300px;
 		background-color: white;
 		float:left;
+		img {
+			text-align: center;
+			height:100px;
+			weight:100px;
+			color:white;
+		}
 	}
 }
-
 
 
 @media (max-width: 600px) {
@@ -32,8 +88,13 @@
 		height:auto;
 	}
 
-	.feature section {
+	.service section {
 		width:98%;
+		margin:0;
 		height:auto;
+
+	}
+	.fixed-container {
+		background-color: white;
 	}
 }

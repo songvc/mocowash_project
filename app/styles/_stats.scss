@@ -1,4 +1,17 @@
 .stats {
-  height:100px;
   background-color:#8CC542;
+  text-align: center;
+  height:200px;
+  position: relative;
+
+  .stats-content {
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    p {
+      color:white;
+      font-size:24px;
+    }
+  }
 }

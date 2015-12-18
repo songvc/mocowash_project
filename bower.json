@@ -2,7 +2,8 @@
   "name": "day3",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "semantic-ui-modal": "~2.1.6"
   },
   "devDependencies": {
     "chai": "~3.4.2",

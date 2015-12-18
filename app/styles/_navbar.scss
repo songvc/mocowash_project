@@ -3,12 +3,15 @@ header {
 	height:50px;
 	width:100%;
 	font-size:20px;
-	// background-color: #8CC542;
-	// opacity: .5;
+	background-color: rgba(0,0,0,0.3);
+}
+
+nav {
+	overflow:auto;
 }
 
 .logo {
-	color:black;
+	color:white;
 	padding-top:10px;
 	padding-left: 10px;
 	float:left;
@@ -18,28 +21,13 @@ header {
 nav {
 	padding-top:10px;
 	ul {
-		overflow: hidden;
 		text-align:center;
 		li {
 			display: inline-block;
-			width:100px;
-
+			margin-left: 2%;
+			margin-right: 2%;
 			a {
-				// background-color: white;
-				color:white!important;
-				text-decoration: none;
-				&:visited {
-					color:#00FF00;
-					text-decoration:none;
-				}
-				&:hover {
-					color: white;
-					opacity: 0.75;
-					transition: opacity 0.2s linear,color 0.2s linear;
-				}
-				&:active {
-					color:#0000FF;
-				}
+				text-transform: uppercase;
 			}
 		}
 
@@ -53,9 +41,14 @@ nav {
 
 @media (max-width: 480px) {
 	 /* Move nav off screen, setup transitions */
+	body {
+		background-color: #1B1C1D;
+	}
+
 	header {
 		background-color: white;
 	}
+
 	.logo {
 		display:none;
 	}
@@ -67,19 +60,15 @@ nav {
 		top: 0;
 		height: 100%;
 		overflow: inherit;
+
 		ul {
 			i {
-				color:black;
+				color:white;
 			}
 			li {
-				border-bottom: 1px white solid;
+				line-height:1;
 				width:100%;
-				margin-top:5%;
-				margin-bottom:5%;
-				color: black;
-				a {
-					// color: black!important;
-				}
+				margin: 5% 0 5% 0;
 			}
 		}
 	}
