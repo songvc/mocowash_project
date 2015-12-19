@@ -1,29 +1,40 @@
-
 .jumbotron {
-	padding-top: 200px;
+	padding-top: 380px;
 	text-align: center;
 	.jumbotron-content {
 		display: inline-block;
 		width:80%;
 		background-color: rgba(0,0,0,0.3);
 		padding:20px;
+
 		h1 {
 			margin:0;
 			font-size: 36px;
 			text-transform: uppercase;
 			color: white;
-		}
-		button {
-			margin-top: 60px;
-			background-color:rgba(51,122,183,0.8);
-			&:hover {
-				background-color:rgba(51,122,183,0.3);
+			.save {
+				color:white;
 			}
 		}
+		button {
+			margin-top: 20px;
+			background: #76D3C9;
+			// rgba(110, 220, 148,0.8);
+			color:white;
+			display:inline-block;
 
+			&:hover {
+				background: rgba(255,255,255,0.1);
+			}
+
+			a {
+				display:block;
+				height:100%;
+				weight:100%;
+			}
+		}
 	}
 }
-
 
 .jumbotron-image {
 	background-image: url(../images/car.jpg);
@@ -42,12 +53,12 @@
 		.jumbotron-content {
 			width:80%;
 			h1 {
-				font-size: 20px;
+				font-size: 30px;
 			}
 			button {
 				font-size:16px;
 				margin-top: 30px;
-				width: 130px;
+				width: 150px;
 			}
 		}
 	}
