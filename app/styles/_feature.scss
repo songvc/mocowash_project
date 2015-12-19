@@ -1,30 +1,27 @@
+hr {
+	width:50%;
+	margin: 10px auto;
+	border-width:3px;
+	padding-bottom: 3%
+}
 
 .about {
-	overflow:auto;
+	padding: 5% 2.5%;
+	height:auto;
 	background-color: #6EB5DC;
-	padding:2.5% 2.5% 5% 2.5%;
 }
 .about {
 	text-align: center;
-	padding-top: 25px;
 	color:white;
 
 	hr {
-		width:30%;
-		margin: 10px auto;
-		border-width:3px;
 		border-color: white;
-	}
-
-	h2 {
-		margin:0;
 	}
 
 	section {
 		width:33.33333%;
-		padding:10px 10px 10px 10px;
+		padding:15px;
 		float:left;
-		// height:400px;
 
 		h1 {
 			padding-top:5px;
@@ -41,18 +38,14 @@
 }
 
 .service {
-	overflow: auto;
+	padding: 5% 2.5%;
+	height:auto;
 	width:100%;
 	text-align: center;
-	padding:2.5% 2.5% 5% 2.5%;
 }
 
 .service {
-	padding-top: 50px;
 	hr {
-		width:30%;
-		margin: 10px auto;
-		border-width:3px;
 		border-color: #608FB3;
 	}
 

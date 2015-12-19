@@ -10,6 +10,7 @@ $(document).ready(function(){
 		$('html').removeClass('openNav');
 	});
 
+	// wiring buttons with modal
 	$('.btn').click(function(e){
 		e.preventDefault();
 		if ($('.modal').is(':visible')){
@@ -23,6 +24,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('.modal').hide();
 	});
+
 
 
 });
