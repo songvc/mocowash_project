@@ -2,7 +2,7 @@
 .contact {
   height:auto;
   background-color: rgba(219,68,54,0.6);
-//
+  
   .contact-map {
     position:relative;
     background-image: url(../images/map.png);
@@ -21,7 +21,6 @@
     padding: 5% 2.5%;
     height:200px;
     width:50%;
-    // font-size:30px;
     background-color: rgba(219,68,54,0.6);
     h2 {
       font-size:28px;
@@ -44,6 +43,7 @@
       top:20%;
       width:80%;
       height:150px;
+      text-align: center;
     }
   }
 }

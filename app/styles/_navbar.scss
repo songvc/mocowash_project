@@ -37,6 +37,7 @@ nav {
 			margin-right: 2%;
 			a {
 				text-transform: uppercase;
+				letter-spacing: 1px;
 			}
 		}
 
@@ -53,15 +54,12 @@ nav {
 	body {
 		background-color: #1B1C1D;
 	}
-
 	header {
 		background-color: white;
 	}
-
 	.logo {
 		display:none;
 	}
-
 	nav {
 		width: 70%;
 		position: absolute;
@@ -71,13 +69,13 @@ nav {
 		overflow: inherit;
 
 		ul {
-			i {
-				color:white;
-			}
+			text-align:left;
+			padding-left: 30px;
+
 			li {
 				line-height:1;
 				width:100%;
-				margin: 5% 0 5% 0;
+				margin: 15px 0px;
 			}
 		}
 	}
@@ -86,7 +84,10 @@ nav {
 		margin: 4%;
 	}
 	.fa-times{
-		margin: 2%;
+		color:white;
+		margin-top:5px;
+		margin-left:-2.5px;
+		float:left;
 	}
 	.open-panel, .close-panel {
 		display: inline;
