@@ -2,7 +2,7 @@
 .contact {
   height:auto;
   background-color: rgba(219,68,54,0.6);
-  
+
   .contact-map {
     position:relative;
     background-image: url(../images/map.png);
@@ -22,6 +22,11 @@
     height:200px;
     width:50%;
     background-color: rgba(219,68,54,0.6);
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px; /* future proofing */
+    -khtml-border-radius: 20px; /* for old Konqueror browsers */
+
     h2 {
       font-size:28px;
     }

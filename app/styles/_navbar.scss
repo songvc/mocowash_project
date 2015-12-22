@@ -11,23 +11,19 @@ nav {
 }
 
 .logo {
+	.moco {
+		color:#30EA29;
+	}
 	color:white;
-	padding-top:5px;
 	padding-left: 10px;
 	float:left;
 	font-family: 'Ubuntu', sans-serif;
+	font-size: 26px;
 
-	.logo-description {
-		color:black;
-		margin-top: -4px;
-		font-size:11px;
-		padding-left:1px;
-		display:inline-block;
-		float:left;
-	}
 }
 
 nav {
+	// float:right;
 	padding-top:10px;
 	ul {
 		text-align:center;
