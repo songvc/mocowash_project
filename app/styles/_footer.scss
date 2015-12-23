@@ -1,8 +1,8 @@
 footer {
-	height:300px;
-	background-color:#252525;
+	// height:300px;
+	background-color:#333D47;
 	text-align: center;
-	padding: 5% 2.5%;
+	padding: 50px 2.5%;
 }
 
 .footer-bottom {
@@ -33,7 +33,6 @@ footer {
 		}
 	}
 	p {
-		margin:0;
 		font-size:14px;
 		color:#82888a;
 
@@ -47,7 +46,7 @@ footer {
 
 @media (max-width: 480px) {
 	footer {
-		padding:30px;
-		height:260px;
+		// padding:30px;
+		// height:260px;
 	}
 }

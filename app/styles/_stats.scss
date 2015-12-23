@@ -1,20 +1,22 @@
 .stats {
-  background-color:#1DC28D;
+  background-color:#5A9958;
   text-align: center;
-  height:200px;
-  position: relative;
+  padding:40px 0px;
+  // height:200px;
+  // position: relative;
 
   .stats-content {
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position:absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
     p {
       color:white;
       font-size:24px;
     }
     button {
       margin-top: 20px;
+      // background-color: #FF6179;
     }
   }
 }

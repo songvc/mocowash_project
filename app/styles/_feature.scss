@@ -1,15 +1,20 @@
 hr {
-	width:50%;
+	width:40%;
 	margin: 10px auto;
 	border-width:3px;
 	padding-bottom: 3%
 }
 
 .about {
-	padding: 5% 2.5%;
+	padding: 30px 10px 50px 10px;
 	height:auto;
-	background-color: #6184DB;
+	background-color: rgba(4, 123, 175, 0.8);
 }
+
+p {
+	// text-align: justify;
+}
+
 .about {
 	text-align: center;
 	color:white;
@@ -28,7 +33,7 @@ hr {
 		float:left;
 
 		h1 {
-			padding-top:5px;
+			padding:15px 0px;
 			text-transform: uppercase;
 		}
 		hr {
@@ -38,40 +43,49 @@ hr {
 			height:100px;
 			weight:100px;
 		}
+		p {
+			padding:20px;
+
+		}
 	}
 }
 
 .service {
-	padding: 5% 2.5%;
+	padding: 30px 10px 50px 10px;
 	height:auto;
+	overflow: hidden;
 	width:100%;
 	text-align: center;
+	background-color: #F9F9F9;
 }
 
 .service {
 	hr {
-		border-color: #608FB3;
+		border-color: rgba(4, 123, 175, 0.8);
 	}
 
 	h2 {
 		font-size:28px;
 		text-align: center;
 		margin:0;
-		color:#608FB3;
+		color:rgba(4, 123, 175, 0.8);
 	}
 
 	section {
 		width:33.33333%;
 		padding:15px;
-		height:250px;
+		height:350px;
 		float:left;
 
 		h1 {
-			color:#608FB3;
+			color:rgba(4, 123, 175, 0.8);
+			text-transform: uppercase;
+			padding:15px 0px;
 		}
 
 		p {
-			color:#608FB3;
+			color:rgba(4, 123, 175, 0.8);
+			padding:20px;
 		}
 
 		img {

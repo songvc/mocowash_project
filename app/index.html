@@ -26,7 +26,7 @@
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		<div class="top-container">
-			<div class="fluid-container">
+			<div class="fluid-container" id="home">
 				<header>
 					<span class="nav-button open-panel"><i class="fa fa-bars"></i></span>
 					<span class="logo"><span class="moco">moco</span>wash</span>
@@ -35,11 +35,11 @@
 						<ul class="nav-menu">
 							<span class="nav-button close-panel"><i class="fa fa-times"></i>
 							</span>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#">FAQ</a></li>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#contact">Contact</a></li>
+							<li><a href="#faq">FAQ</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -52,13 +52,14 @@
 			</div>
 			<div class="line"></div>
 			<div class="top-strip">
-
+				<span>Save <span class="number">38</span> gallons per wash.</span>
+				<button>Show Me How</button>
 			</div>
 			<div class="strip">
 
 			</div>
 
-			<div class="fluid-container about">
+			<div class="fluid-container about" id="about">
 				<div class="container">
 					<h2>why mocowash?</h2>
 					<hr>
@@ -89,8 +90,8 @@
 				</div>
 			</div>
 
-			<div class="service fixed-container">
-				<h2>our service includes</h2>
+			<div class="service fixed-container" id="services">
+				<h2>our services include</h2>
 				<hr>
 				<section class="col1">
 					<img src="../icons/icon1.svg" alt="">
@@ -124,21 +125,21 @@
 				</section>
 			</div>
 
-			<div class="fluid-container">
+			<div class="fluid-container" id="contact">
 				<div class="stats">
 					<div class="stats-content">
-						<p>Like what you see? Here's our mailing list</p>
-						<button class="btn">SIGN UP NOW</button>
+						<p>SEE OUR CONVERAGE AREA</p>
+						<button class="btn">VIEW MAP</button>
 					</div>
 				</div>
-				<div class="contact fixed-container">
+				<!-- <div class="contact fixed-container">
 					<div class="contact-map">
 						<div class="contact-description">
 							<h2>We'll Come To You! <br><span>Mocowash currently serves South Bay area</span></h2>
 						</div>
 					</div>
-				</div>
-				<footer>
+				</div> -->
+				<footer id="faq">
 					<div class="footer-bottom">
 						<h2>Join Us On</h2>
 						<hr class="center-align">

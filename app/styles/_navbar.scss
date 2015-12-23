@@ -1,9 +1,11 @@
 header {
 	position:fixed;
-	height:50px;
 	width:100%;
-	font-size:20px;
-	background-color: rgba(0,0,0,0.3);
+	// font-size:20px;
+	// height:50px;
+  background-image: linear-gradient(to bottom,rgba(51,61,71,0.95),transparent);
+	// background-color: rgba(0,0,0,0.3);
+	padding: 10px;
 }
 
 nav {
@@ -11,27 +13,37 @@ nav {
 }
 
 .logo {
+	margin-top:2px;
+	margin-left: 20px;
+	line-height: 25px;
+	vertical-align: middle;
+
 	.moco {
 		color:#30EA29;
 	}
 	color:white;
-	padding-left: 10px;
+	// padding-left: 10px;
+	// padding-top:4px;
 	float:left;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'bdp', sans-serif;
 	font-size: 26px;
-
 }
 
 nav {
-	// float:right;
-	padding-top:10px;
+	float:right;
+	width:450px;
+	// line-height:5px;
+	// height:20px;
 	ul {
 		text-align:center;
 		li {
+			vertical-align: middle;
+			line-height: 30px;
 			display: inline-block;
 			margin-left: 2%;
 			margin-right: 2%;
 			a {
+				font-weight:200;
 				text-transform: uppercase;
 				letter-spacing: 1px;
 			}
@@ -52,9 +64,17 @@ nav {
 	}
 	header {
 		background-color: white;
+		background-color: transparent;
+		text-align: center;
 	}
 	.logo {
-		display:none;
+		float:none;
+		text-align: center;
+
+	}
+	.nav-button {
+		float:left;
+
 	}
 	nav {
 		width: 70%;
@@ -81,7 +101,7 @@ nav {
 	}
 	.fa-times{
 		color:white;
-		margin-top:5px;
+		margin-top:15px;
 		margin-left:-2.5px;
 		float:left;
 	}
