@@ -13,6 +13,7 @@ nav {
 }
 
 .logo {
+	font-family:"Ubuntu"!important;
 	margin-top:2px;
 	margin-left: 20px;
 	line-height: 25px;
@@ -69,12 +70,11 @@ nav {
 	}
 	.logo {
 		float:none;
+		margin:0;
 		text-align: center;
-
 	}
 	.nav-button {
 		float:left;
-
 	}
 	nav {
 		width: 70%;

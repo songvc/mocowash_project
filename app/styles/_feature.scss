@@ -8,7 +8,7 @@ hr {
 .about {
 	padding: 30px 10px 50px 10px;
 	height:auto;
-	background-color: rgba(4, 123, 175, 0.8);
+	background-color: #047baf;
 }
 
 p {
@@ -17,7 +17,7 @@ p {
 
 .about {
 	text-align: center;
-	color:white;
+	color:#f9f9f9;
 
 	h2 {
 		font-size:35px;
@@ -29,23 +29,25 @@ p {
 
 	section {
 		width:50%;
-		padding:20px;
+		padding:25px;
 		float:left;
 
 		h1 {
-			padding:15px 0px;
+			font-size:28px;
+			// padding:20px 0px 10px 0px;
 			text-transform: uppercase;
 		}
+
 		hr {
 			border-width: 1px;
 		}
 		img {
-			height:100px;
-			weight:100px;
+			height:50px;
+			weight:50px;
 		}
 		p {
-			padding:20px;
-
+			padding:15px 0px;
+			text-align:justify;
 		}
 	}
 }
@@ -85,7 +87,9 @@ p {
 
 		p {
 			color:rgba(4, 123, 175, 0.8);
-			padding:20px;
+			padding:15px 0px;
+			text-align:justify;
+
 		}
 
 		img {

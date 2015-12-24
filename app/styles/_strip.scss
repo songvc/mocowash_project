@@ -8,7 +8,7 @@
   padding: 6.5px 0;
   background-color: #2DDC27;
   color:white;
-  font-size:28px;
+  // font-size:28px;
   letter-spacing: 1.5px;
   text-align: center;
 
@@ -26,34 +26,35 @@
       vertical-align: baseline;
     }
   }
+
   button {
     // letter-spacing: 2px;
     vertical-align: middle;
     text-transform: uppercase;
     font-weight:400;
     height:40px;
-    // background-color:rgb(45,220,39,0.8);
+    background-color:#2DDC27;
     border-style: solid;
     border-color: white;
     border-width: 1.5px;
     width:200px;
     font-size:15px;
     &:hover {
-      // background-color:rgb(45,220,39,0.8);
+      color:white;
+      background-color:#4CFB46;
     }
   }
 }
 
-.strip {
-  height:100px;
-  background-color: white;
-
-}
 
 @media (max-width:460px) {
   .top-strip {
     // font-size:20px;
-    padding: 25px 0;
+    padding: 30px 0;
+    span {
+      font-size: 26px;
+      line-height:26px;
+    }
     button {
       margin-top: 10px;
     }
