@@ -2,4 +2,4 @@
 
 Responsive Mobile E-Commerce Website
 
-No Bootstrap/Vanilla CSS
+SMACCS CSS Architecture with SASS preprocessors
