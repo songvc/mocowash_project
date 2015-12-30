@@ -3,7 +3,7 @@
   padding: 30px 10px 50px 10px;
 	overflow: auto;
 	text-align: center;
-	background-color: #F9F9F9;
+	background-color: white;
 
 	hr {
 		border-color: $font-color;
@@ -40,8 +40,16 @@
 			weight:100px;
 		}
 
+    .service-logo {
+      path, polygon, circle, ellipse {
+        fill:$font-color;
+      }
+    }
 	}
+
 }
+
+
 
 @media (max-width: 600px) {
 

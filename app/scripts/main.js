@@ -39,8 +39,8 @@ $(document).ready(function(){
 	  if($window.scrollTop() > 10){
     	$header.css({
 				"background-color":"white",
+				"box-shadow":"0 0.50rem 0.05rem rgba(0,0,0,.4)",
 				"background-image":"none",
-
 			})
 
 			console.log($(".navlist"));
@@ -51,6 +51,7 @@ $(document).ready(function(){
 	  } else {
 			$header.css({
 				"background-color":"transparent",
+				"box-shadow":"none",
 				"background-image":"linear-gradient(to bottom,rgba(25,25,25,0.95),transparent)"
 			})
 
