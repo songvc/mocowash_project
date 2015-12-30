@@ -9,8 +9,9 @@
 // Base Helpers
 @import "_mixins";
 @import "_reset";
+@import "_variable";
 
-// Layout
+// Base & Layout
 @import "_base";
 @import "_layout";
 
@@ -18,9 +19,10 @@
 @import "_button";
 @import "_navbar";
 @import "_jumbotron";
+@import "_about";
+@import "_service";
 @import "_strip";
 @import "_stats";
-@import "_feature";
 @import "_contact";
 @import "_footer";
 @import "_modal";

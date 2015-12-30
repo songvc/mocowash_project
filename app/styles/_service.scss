@@ -1,0 +1,55 @@
+
+.service {
+  padding: 30px 10px 50px 10px;
+	overflow: auto;
+	text-align: center;
+	background-color: #F9F9F9;
+
+	hr {
+		border-color: $font-color;
+	}
+
+	h2 {
+		font-size:28px;
+		text-align: center;
+		margin:0;
+		color: $font-color;
+	}
+
+	section {
+		width:33.33333%;
+		padding:25px;
+		height:350px;
+		float:left;
+
+		h1 {
+			color:$font-color;
+			text-transform: uppercase;
+			padding:15px 0px;
+		}
+
+		p {
+			color:$font-color;
+			padding:15px 0px;
+			text-align:justify;
+
+		}
+
+		img {
+			height:100px;
+			weight:100px;
+		}
+
+	}
+}
+
+@media (max-width: 600px) {
+
+	.service section {
+		width:98%;
+		margin:0;
+		height:auto;
+
+	}
+
+}

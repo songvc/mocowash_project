@@ -1,0 +1,48 @@
+.about {
+	padding: 30px 10px 50px 10px;
+	background-color: #0BA0FF;
+	overflow:auto;
+	text-align: center;
+	color:#f9f9f9;
+
+	h2 {
+		font-size:35px;
+	}
+
+	hr {
+		border-color: white;
+	}
+
+	section {
+		width:50%;
+		padding:25px;
+		float:left;
+
+		h1 {
+			font-size:28px;
+			// padding:20px 0px 10px 0px;
+			text-transform: uppercase;
+		}
+
+		hr {
+			border-width: 1px;
+		}
+		img {
+			height:50px;
+			weight:50px;
+		}
+		p {
+			padding:15px 0px;
+			text-align:justify;
+		}
+	}
+
+
+}
+
+@media (max-width: 600px) {
+	.about section {
+		width:98%;
+		height:auto;
+	}
+}

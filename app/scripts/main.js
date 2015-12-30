@@ -2,41 +2,65 @@
 
 $(document).ready(function(){
 	// Controller responsive off-canvas navbar
+
+	var $window 	= $(window),
+			$html		 	= $('html'),
+	 		$header 	= $('header'),
+			$modal		= $('.modal');
+
 	$('.open-panel').click(function(){
-		$('html').addClass('openNav');
+		$html.addClass('openNav');
 	});
 
 	$('.close-panel, #content').click(function(){
-		$('html').removeClass('openNav');
+		$html.removeClass('openNav');
 	});
-
-	// $(window).on('scroll', function() {
-	// 	var scrollTop = $(this).scrollTop();
-	// 	console.log(scrollTop);
-	//
-	// 	$('header').each(function() {
-	// 		var topDistance = $(this).offset().top;
-	//
-	// 		if ( (topDistance+100) < scrollTop ) {
-	// 		    alert( $(this).text() + ' was scrolled to the top' );
-	// 		}
-	// 	});
-	// });
 
 	// wiring buttons with modal
 	$('.btn').click(function(e){
 		e.preventDefault();
-		if ($('.modal').is(':visible')){
-			$('.modal').hide();
+		if ($modal.is(':visible')){
+			$modal.hide();
 		}else {
-			$('.modal').show();
+			$modal.show();
 		}
 	});
 
 	$('.close').click(function(e){
 		e.preventDefault();
-		$('.modal').hide();
+		$modal.hide();
 	});
+
+
+  $window.scroll(function(){
+		// console.log("scrollTop:  "+$window.scrollTop());
+		// console.log("height:  "+ $window.height());
+
+	  if($window.scrollTop() > 10){
+    	$header.css({
+				"background-color":"white",
+				"background-image":"none",
+
+			})
+
+			console.log($(".navlist"));
+			$(".navlist").css({
+					"color":"red"
+			})
+
+	  } else {
+			$header.css({
+				"background-color":"transparent",
+				"background-image":"linear-gradient(to bottom,rgba(25,25,25,0.95),transparent)"
+			})
+
+			$(".navlist").css({
+					"color":"white"
+			})
+
+		}
+
+  })
 
 
 

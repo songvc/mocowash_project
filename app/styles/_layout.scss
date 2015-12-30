@@ -1,17 +1,18 @@
-
 .fluid-container {
   width:100%;
+  margin:auto;
   overflow: auto;
 }
 
-.container {
+.fixed-width {
 	max-width: 1000px;
-	margin:auto;
-  overflow: auto;
+  margin:auto;
 }
 
-.fixed-container {
-	max-width: 1000px;
-	margin:auto;
-  overflow: auto;
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }

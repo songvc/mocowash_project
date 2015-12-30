@@ -1,14 +1,10 @@
-.line {
-  height:1px;
-  background-color: white;
-}
-
 .top-strip {
+  border-top: solid white 1px;
+  border-bottom: solid white 1px;
   font-family:"Arial", sans-serif;
   padding: 6.5px 0;
   background-color: #2DDC27;
   color:white;
-  // font-size:28px;
   letter-spacing: 1.5px;
   text-align: center;
 

@@ -15,6 +15,10 @@
     button {
       margin-top: 20px;
       // background-color: #FF6179;
+      &:hover {
+        color:white;
+        background-color:#5A9958;
+      }
     }
   }
 }

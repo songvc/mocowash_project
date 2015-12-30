@@ -1,10 +1,8 @@
 header {
 	position:fixed;
 	width:100%;
-	// font-size:20px;
-	// height:50px;
-  background-image: linear-gradient(to bottom,rgba(51,61,71,0.95),transparent);
-	// background-color: rgba(0,0,0,0.3);
+	// background-color: white;
+  // background-image: linear-gradient(to bottom,rgba(25,25,25,0.95),transparent);
 	padding: 10px;
 }
 
@@ -12,17 +10,23 @@ nav {
 	overflow:auto;
 }
 
+.logo-icon {
+	height:30px;
+	width:auto;
+	float:left;
+}
+
 .logo {
 	font-family:"Ubuntu"!important;
 	margin-top:2px;
-	margin-left: 20px;
+	margin-left: 10px;
 	line-height: 25px;
 	vertical-align: middle;
 
 	.moco {
 		color:#30EA29;
 	}
-	color:white;
+	color:#009BFF;
 	// padding-left: 10px;
 	// padding-top:4px;
 	float:left;
@@ -43,39 +47,49 @@ nav {
 			display: inline-block;
 			margin-left: 2%;
 			margin-right: 2%;
-			a {
-				font-weight:200;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-			}
 		}
 
 	}
+
+	.nav-list {
+		color: white;
+		font-weight:200;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
 }
 
 .open-panel, .close-panel {
 	display:none;
 }
 
-
 @media (max-width: 480px) {
 	 /* Move nav off screen, setup transitions */
 	body {
 		background-color: #1B1C1D;
 	}
+
 	header {
 		background-color: white;
 		background-color: transparent;
 		text-align: center;
 	}
+
 	.logo {
 		float:none;
 		margin:0;
 		text-align: center;
 	}
+
+	.logo-icon {
+		float:none;
+	}
+
 	.nav-button {
 		float:left;
 	}
+
 	nav {
 		width: 70%;
 		position: absolute;
