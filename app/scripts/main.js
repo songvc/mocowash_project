@@ -31,7 +31,7 @@ $(document).ready(function(){
 		$modal.hide();
 	});
 
-
+	// Scrolling Effects
   $window.scroll(function(){
 		// console.log("scrollTop:  "+$window.scrollTop());
 		// console.log("height:  "+ $window.height());
