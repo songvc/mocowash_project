@@ -43,7 +43,7 @@ $(document).ready(function(){
 				"background-image":"none",
 			})
 
-			console.log($(".navlist"));
+			// console.log($(".navlist"));
 			$(".navlist").css({
 					"color":"red"
 			})
