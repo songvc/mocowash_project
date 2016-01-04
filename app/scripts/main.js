@@ -39,11 +39,10 @@ $(document).ready(function(){
 	  if($window.scrollTop() > 10){
     	$header.css({
 				"background-color":"white",
-				"box-shadow":"0 0.50rem 0.05rem rgba(0,0,0,.4)",
+				"box-shadow": "0 .125rem .25rem rgba(51,61,71,.4)",
 				"background-image":"none",
 			})
 
-			// console.log($(".navlist"));
 			$(".navlist").css({
 					"color":"red"
 			})

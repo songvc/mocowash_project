@@ -5,31 +5,23 @@
 	text-align: center;
 	color:#f9f9f9;
 
-	h2 {
-		font-size:35px;
-	}
-
 	hr {
 		border-color: white;
 	}
-
+	h2 {
+		text-transform: uppercase;
+	}
 	section {
 		width:50%;
 		padding:25px;
 		float:left;
 
-		h1 {
-			font-size:28px;
-			// padding:20px 0px 10px 0px;
-			text-transform: uppercase;
-		}
-
 		hr {
 			border-width: 1px;
 		}
 		img {
-			height:50px;
-			weight:50px;
+			height:80px;
+			weight:80px;
 		}
 		p {
 			padding:15px 0px;
