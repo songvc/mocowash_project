@@ -43,8 +43,8 @@ $(document).ready(function(){
 				"background-image":"none",
 			})
 
-			$(".navlist").css({
-					"color":"red"
+			$(".nav-list").css({
+					"color":"black"
 			})
 
 	  } else {
@@ -54,7 +54,7 @@ $(document).ready(function(){
 				"background-image":"linear-gradient(to bottom,rgba(25,25,25,0.95),transparent)"
 			})
 
-			$(".navlist").css({
+			$(".nav-list").css({
 					"color":"white"
 			})
 

@@ -1,19 +1,15 @@
-.stats {
+
+.contact {
   background-color:#5A9958;
   text-align: center;
   padding:40px 0px;
 
-  .stats-content {
-    // position:absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    p {
+  .contact-content {
+    h2 {
       color:white;
     }
     button {
       margin-top: 20px;
-      // background-color: #FF6179;
       &:hover {
         color:white;
         background-color:#5A9958;

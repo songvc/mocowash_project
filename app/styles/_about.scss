@@ -12,7 +12,7 @@
 		text-transform: uppercase;
 	}
 	section {
-		width:50%;
+		width:100%;
 		padding:25px;
 		float:left;
 
@@ -32,9 +32,14 @@
 
 }
 
-@media (max-width: 600px) {
+
+@media (min-width: $small-screen-size) {
+
 	.about section {
-		width:98%;
-		height:auto;
+		width:50%;
+		margin:2px auto;
+		// height:auto;
+
 	}
+
 }
