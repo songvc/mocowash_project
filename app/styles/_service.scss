@@ -9,13 +9,13 @@
 		border-color: $font-color;
 	}
 
-	h2 {
+	.service-h2 {
 		text-transform: uppercase;
 		color: $font-color;
 	}
 
   .service-title {
-    text-transform: lowercase;
+    color: $font-color;
   }
 
 	section {
@@ -40,7 +40,6 @@
       transition: opacity 0.5s linear;
       &:hover, &:active, &:focus {
         opacity: 0;
-        // top:-350px;
       }
     }
 
