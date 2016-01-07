@@ -1,14 +1,15 @@
 'use strict';
 
 $(document).ready(function(){
-	// Controller responsive off-canvas navbar
 
-	var $window 	= $(window),
-			$html		 	= $('html'),
-	 		$header 	= $('header'),
-			$modal		= $('.modal');
+	var $window 	= 	$(window);
+	var	$html		 	= 	$('html');
+	var $header 	= 	$('header');
+	var $modal		= 	$('.modal');
+	var $navlist	=		$('.nav-list');
+	var $openpanel = $('.open-panel');
 
-	$('.open-panel').click(function(){
+	$openpanel.click(function(){
 		$html.addClass('openNav');
 	});
 
@@ -31,36 +32,31 @@ $(document).ready(function(){
 		$modal.hide();
 	});
 
-	// Scrolling Effects
-  $window.scroll(function(){
-		// console.log("scrollTop:  "+$window.scrollTop());
-		// console.log("height:  "+ $window.height());
-
-	  if($window.scrollTop() > 10){
-    	$header.css({
-				"background-color":"white",
-				"box-shadow": "0 .125rem .25rem rgba(51,61,71,.4)",
-				"background-image":"none",
-			})
-
-			$(".nav-list").css({
-					"color":"black"
-			})
-
-	  } else {
+	$window.scroll(function(){
+		if ($window.scrollTop() > 10){
 			$header.css({
-				"background-color":"transparent",
-				"box-shadow":"none",
-				"background-image":"linear-gradient(to bottom,rgba(25,25,25,0.95),transparent)"
-			})
+				'background-color': 'white',
+				'box-shadow': '0 .125rem .25rem rgba(51,61,71,.4)',
+				'background-image': 'none'
+			});
 
-			$(".nav-list").css({
-					"color":"white"
-			})
+			$navlist.css({
+					'color': 'black'
+			});
 
+		} else {
+			$header.css({
+				'background-color': 'transparent',
+				'box-shadow': 'none',
+				'background-image': 'linear-gradient(to bottom,rgba(25,25,25,0.95),transparent)'
+			});
+
+			$navlist.css({
+				'color': 'white'
+			});
 		}
 
-  })
+	});
 
 
 

@@ -1,11 +1,14 @@
-.top-strip {
+.bottom-strip {
+  position:absolute;
+  bottom:0;
+  width:100%;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
   border-top: solid white 1px;
   border-bottom: solid white 1px;
   font-family:"Arial", sans-serif;
-  padding: 15px 0;
+  padding: 3px 0;
   background-color: #2DDC27;
   color:white;
   text-align: center;
@@ -20,6 +23,7 @@
   }
 
   button {
+    color:white;
     display:inline-block;
     text-transform: uppercase;
     font-weight:400;
