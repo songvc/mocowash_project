@@ -37,6 +37,9 @@
 
 
 @media (min-width: $small-screen-size) {
+	.jumbotron .jumbotron-image .jumbotron-content {
+		top:35%;
+	}
 }
 
 @media (min-width: $medium-screen-size) {
@@ -46,5 +49,7 @@
 }
 
 @media (min-width: $large-screen-size) {
-
+	.jumbotron .jumbotron-image {
+		min-height:90vh;
+	}
 }
