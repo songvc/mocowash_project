@@ -44,12 +44,12 @@
 
 @media (min-width: $medium-screen-size) {
 	.jumbotron .jumbotron-image {
-		min-height:95vh;
+		min-height:90vh;
 	}
 }
 
 @media (min-width: $large-screen-size) {
 	.jumbotron .jumbotron-image {
-		min-height:90vh;
+		min-height:80vh;
 	}
 }

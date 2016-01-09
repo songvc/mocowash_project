@@ -1,6 +1,6 @@
 .service {
-  padding: 30px 10px 50px 10px;
-	overflow: auto;
+  padding: 30px 15px 30px 15px;
+	overflow: hidden;
 	text-align: center;
 	background-color: white;
 
@@ -20,14 +20,16 @@
 	section {
 		width:99%;
     margin: 1%;
-    height:350px;
+    height:400px;
 		float:left;
     position:relative;
-    // border-color: black;
-    // border-style: solid;
+    // border-radius: 3px;
     // border-width: 1px;
 
     .service-box {
+      // border-radius: 3px;
+      // border-width: 1px;
+      // border-color:black;
       height:100%;
       width:100%;
       z-index:1;
@@ -36,23 +38,28 @@
       top:0;
       left:0;
       background-color: white;
-      transition: opacity 0.5s linear;
-      &:hover, &:active, &:focus {
-        opacity: 0;
-      }
+      cursor:pointer;
+      display:block;
+      transition: all 2s linear;
     }
 
     .service-price {
       width:100%;
-      height:100%;
+      height:90%;
       position:absolute;
       top:0;
       left:0;
       z-index:0;
+      cursor:pointer;
 
-      .service-col {
-        width:33.33333%;
-        float:left;
+      h4 {
+        font-size:1em;
+        color:$font-color;
+        border-style:solid;
+        border-radius: 0px 0px 3px 3px;
+        border-width:1px;
+        border-color: $font-color;
+        padding:10px 30px 10px 30px;
       }
     }
 
@@ -68,25 +75,41 @@
 			text-align:justify;
 		}
 
-		img {
-			height:100px;
-			weight:100px;
-		}
-
     .service-logo {
+      height:50%;
+      width:50%;
+      position:absolute;
+  		display:block;
+  		top:25%;
+  		left:25%;
+
       path, polygon, circle, ellipse {
         fill:$font-color;
       }
     }
 	}
-
 }
+
+.hidden {
+  display:none;
+  // opacity: 0;
+}
+
 
 @media (min-width: $small-screen-size) {
 	.service section {
 		width:50%;
 		margin:2px auto;
 	}
+  .service h2 {
+    font-size:1.6em;
+  }
+}
+
+@media (min-width: $medium-screen-size) {
+  .service h2 {
+    font-size:1.6em;
+  }
 }
 
 @media (min-width: $large-screen-size) {

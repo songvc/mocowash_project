@@ -1,43 +1,77 @@
 .ribbon {
   position: absolute;
-  right: -5px; top: -5px;
-  z-index: 5;
+  z-index: 2;top: -5px;
+  right: -5px;
+
   overflow: hidden;
+
   width: 75px; height: 75px;
+
   text-align: right;
 }
 .ribbon span {
-  font-size: 10px;
-  font-weight: bold;
-  color: #FFF;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 20px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  width: 100px;
+  position: absolute;
+  top: 19px; right: -21px;
+
   display: block;
+
+  width: 100px;
+
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #FFF;
   background: #2DDC27;
   background: linear-gradient(#61e75a 0%, #2DDC27 100%);
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 19px; right: -21px;
+
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 20px;
+
 }
 .ribbon span::before {
+  position: absolute;
+  z-index: -1;top: 100%;left: 0px;
+
   content: "";
-  position: absolute; left: 0px; top: 100%;
-  z-index: -1;
-  border-left: 3px solid #2DDC27;
+
+  border-top: 3px solid #2DDC27;
   border-right: 3px solid transparent;
   border-bottom: 3px solid transparent;
-  border-top: 3px solid #2DDC27;
+  border-left: 3px solid #2DDC27;
 }
 .ribbon span::after {
+  position: absolute;
+  z-index: -1;top: 100%;right: 0px;
+
   content: "";
-  position: absolute; right: 0px; top: 100%;
-  z-index: -1;
-  border-left: 3px solid transparent;
+
+  border-top: 3px solid #79A70A;
   border-right: 3px solid #79A70A;
   border-bottom: 3px solid transparent;
-  border-top: 3px solid #79A70A;
+  border-left: 3px solid transparent;
+}
+
+.col2 {
+  .ribbon span{
+    background: red;
+    background: linear-gradient(red 0%, rgb(190, 6, 6) 100%);
+  }
+  .ribbon span::before {
+    border-top: 3px solid #d90303;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid #d90303;
+  }
+
+  .ribbon span::after{
+    border-top: 3px solid #a70a0a;
+    border-right: 3px solid #a70a0a;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+  }
+
 }

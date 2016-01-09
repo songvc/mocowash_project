@@ -1,45 +1,165 @@
+
 .about {
-	padding: 30px 10px 50px 10px;
+
+	padding:15px 15px 0px 15px;
 	background-color: #0BA0FF;
-	overflow:auto;
+	overflow:hidden;
 	text-align: center;
 	color:#f9f9f9;
 
-	hr {
-		border-color: white;
-	}
 	h2 {
+		margin-top: 10px;
 		text-transform: uppercase;
 	}
-	section {
-		width:100%;
-		padding:25px;
-		float:left;
 
-		hr {
-			border-width: 1px;
-		}
-		img {
-			height:80px;
-			weight:80px;
-		}
-		p {
-			padding:15px 0px;
-			text-align:justify;
-		}
+	img {
+		margin: 0 auto;
 	}
 
+	section {
+		padding:20px;
+		margin:0px 0px 15px 0px;
+		width:100%;
+		height:350px;
+		float:left;
+		border-radius: 3px;
+		background: rgba(0,0,0,0.15);
+	}
+}
+
+.bottom {
+	position:relative;
+	text-align: center;
+
+	img {
+		height:50%;
+		width:50%;
+		position:absolute;
+		display:block;
+		top:25%;
+		left:25%;
+	}
+	h4 {
+		position:absolute;
+		margin-bottom: 0;
+		padding: inherit;
+		bottom:0;
+	}
+}
+
+.about-col {
+	hr {
+		border-color:white;
+		width:100%;
+	}
+	h4 {
+		display:none;
+	}
+
+	.number {
+		color: #2DDC27;
+		display:inline-block;
+	}
+}
+
+.about-col .logo-container {
+	background-color: white;
+	.about-logo-icon {
+		height:90px;
+		display:block;
+		margin: 0 auto;
+	}
+	border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 
 }
 
 
 @media (min-width: $small-screen-size) {
 
-	.about section {
-		width:50%;
-		margin:2px auto;
-		// height:auto;
+	.about .top {
+		width:100%;
+		height:350px;
+	}
+
+	.about .bottom {
+		width: 49%;
+		height:350px;
+	}
+
+	.about .about-col-2 {
+		margin-right:1%;
+	}
+
+	.about .about-col-3 {
+		margin-left:1%;
+	}
+
+	.about-col .logo-container {
+		.about-logo-icon {
+			height:120px;
+		}
+	}
+}
+
+
+@media (min-width: $medium-screen-size) {
+
+	.about .top {
+		width:49%;
+		margin-right: 2%;
+		height:715px;
+	}
+	.about .bottom {
+		width:49%;
+		h2 {
+			margin-top:0;
+		}
+	}
+
+	.about .about-col-2 {
+		margin-right:0%;
 
 	}
 
+	.about .about-col-3 {
+		margin-left:0%;
+	}
+	.about-col {
+		h3 {
+			color:white;
+		}
+		h4 {
+			display:block;
+			color:white;
+		}
+	}
+
+	.about-col .logo-container {
+		.about-logo-icon {
+			height:130px;
+		}
+	}
+
+}
+
+@media (min-width: $large-screen-size) {
+
+	.about {
+		padding: 30px 0px;
+	}
+
+	.about-col .logo-container {
+		.about-logo-icon {
+			height:150px;
+		}
+	}
+
+	.about .top {
+		height:715px;
+	}
+
+	.about .bottom h2 {
+		// margin:-15px;
+	}
 }
