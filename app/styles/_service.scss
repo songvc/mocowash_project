@@ -40,7 +40,8 @@
       background-color: white;
       cursor:pointer;
       display:block;
-      transition: all 2s linear;
+      // transition: opacity 1000ms;
+      // opacity:1;
     }
 
     .service-price {
@@ -91,8 +92,7 @@
 }
 
 .hidden {
-  display:none;
-  // opacity: 0;
+  opacity: 0;
 }
 
 

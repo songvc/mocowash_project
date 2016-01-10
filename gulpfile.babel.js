@@ -15,7 +15,8 @@ gulp.task('styles', () => {
     .pipe($.sass.sync({
       outputStyle: 'expanded',
       precision: 10,
-      includePaths: ['.']
+      includePaths: ['.'],
+      includePaths: require('node-bourbon').includePaths
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['last 1 version']}))
     .pipe($.sourcemaps.write())
