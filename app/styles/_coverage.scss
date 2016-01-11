@@ -18,3 +18,65 @@
     }
   }
 }
+
+#contact .fancy-box {
+  max-width:100%;
+  padding:5px;
+  border-radius: 4px;
+  background-color: white;
+  display:none;
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  margin:0 auto;
+  z-index:99;
+  margin-top:20%;
+
+  img {
+    height:100%;
+    width:100%;
+  }
+
+  &:before {
+    content: "";
+    position:fixed;
+    background-color:rgba(0,0,0,.8);
+    bottom:0px;
+    right:0px;
+    left:0px;
+    height:100%;
+    weight:100%;
+    z-index:-1;
+  }
+
+}
+
+
+@media (min-width: $small-screen-size) {
+  #contact .fancy-box {
+    max-width:80%;
+    margin-top:15%;
+  }
+}
+
+@media (min-width: $medium-screen-size) {
+  #contact .fancy-box {
+    max-width:70%;
+    margin-top:10%;
+  }
+}
+
+@media (min-width: $large-screen-size) {
+  #contact .fancy-box {
+    max-width:60%;
+    margin-top:5%;
+  }
+}
+
+@media (min-width: $break-medium){
+  #contact .fancy-box {
+    max-width:50%;
+    @include transform(translateX(140px));
+  }
+}

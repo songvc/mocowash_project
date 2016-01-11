@@ -13,6 +13,7 @@
 
 		<!-- build:css styles/vendor.css -->
 		<!-- bower:css -->
+		<link rel="stylesheet" href="/bower_components/lightbox2/dist/css/lightbox.css" />
 		<!-- endbower -->
 		<!-- endbuild -->
 
@@ -104,7 +105,9 @@
 							</section>
 						</div>
 					</div>
-
+					<div class="work" id="work">
+						<h1>How it works</h1>
+					</div>
 					<div class="service" id="services">
 						<div class="fixed-width">
 							<h2 class="service-title">Our services include</h2>
@@ -322,51 +325,55 @@
 						<div class="contact">
 							<div class="contact-content">
 								<h2>See our coverage here</h2>
-								<button class="btn">VIEW MAP</button>
+								<button class="map-btn">VIEW MAP</button>
 							</div>
 						</div>
-						<footer id="faq">
-							<div class="footer-bottom">
-								<h2>Join Us On</h2>
-								<hr class="center-align">
-								<ul>
-									<li><a href="#"><i class = "fa fa-facebook"></i></a></li><!--
-									--><li><a href="#"><i class = "fa fa-twitter"></i></a></li><!--
-									--><li><a href="#"><i class = "fa fa-linkedin"></i></a></li><!--
-									--><li><a href="#"><i class = "fa fa-google-plus"></i></a></li><!--
-									--><li><a href="#"><i class = "fa fa-instagram"></i></a></li>
-								</ul>
-								<p>will@mocowash.com</p>
-								<p>Privacy & Terms of Conditions</p>
-								<p>© 2015 Mocowash, Inc. All Rights Reserved.</p>
-							</div>
-						</footer>
+						<div class="fancy-box">
+							<img src="images/coverage_map.jpg" alt="">
+						</div>
+					</div>
 
-						<div class="modal">
-							<div class="modal-container">
-								<div class="modal-header">
-									<h1>Join Us</h1>
-								</div>
-								<div class="modal-body">
-									<label for="">E-mail</label>
-									<input type="text">
-									<label for="">Phone Number</label>
-									<input type="text">
-									<label for="">First Name</label>
-									<input type="text">
-									<label for="">Last Name</label>
-									<input type="text">
-									<label for="">Company</label>
-									<input type="text">
-								</div>
-								<div class="modal-footer">
-									<button class="close">Cancel</button>
-									<button class="submit">Send</button>
-								</div>
+					<footer id="faq">
+						<div class="footer-bottom">
+							<h2>Join Us On</h2>
+							<hr class="center-align">
+							<ul>
+								<li><a href="#"><i class = "fa fa-facebook"></i></a></li><!--
+								--><li><a href="#"><i class = "fa fa-twitter"></i></a></li><!--
+								--><li><a href="#"><i class = "fa fa-linkedin"></i></a></li><!--
+								--><li><a href="#"><i class = "fa fa-google-plus"></i></a></li><!--
+								--><li><a href="#"><i class = "fa fa-instagram"></i></a></li>
+							</ul>
+							<p>will@mocowash.com</p>
+							<p>Privacy & Terms of Conditions</p>
+							<p>© 2015 Mocowash, Inc. All Rights Reserved.</p>
+						</div>
+					</footer>
+
+					<div class="modal">
+						<div class="modal-container">
+							<div class="modal-header">
+								<h1>Join Us</h1>
+							</div>
+							<div class="modal-body">
+								<label for="">E-mail</label>
+								<input type="text">
+								<label for="">Phone Number</label>
+								<input type="text">
+								<label for="">First Name</label>
+								<input type="text">
+								<label for="">Last Name</label>
+								<input type="text">
+								<label for="">Company</label>
+								<input type="text">
+							</div>
+							<div class="modal-footer">
+								<button class="close">Cancel</button>
+								<button class="submit">Send</button>
 							</div>
 						</div>
+					</div>
 					<!-- </div> -->
-				</div>
 			</div>
 		</div>
 
@@ -389,6 +396,7 @@
 		<!-- build:js scripts/vendor.js -->
 		<!-- bower:js -->
 		<script src="/bower_components/jquery/dist/jquery.js"></script>
+		<script src="/bower_components/lightbox2/dist/js/lightbox.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 

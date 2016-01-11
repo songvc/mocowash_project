@@ -27,6 +27,21 @@ $(document).ready(function(){
 		$modal.hide();
 	});
 
+	// wiring map buttons
+	$('.map-btn').click(function(e){
+		e.preventDefault();
+		$('#contact .fancy-box').css({
+			'display': 'block'
+		});
+	});
+
+	$('.fancy-box img').click(function(e){
+		e.preventDefault();
+		$('#contact .fancy-box').css({
+			'display': 'none'
+		});
+	});
+
 	// navbar
 
 	$('.menu').on('click', function(){

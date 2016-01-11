@@ -121,34 +121,34 @@
   }
 }
 
-@media screen and (max-width: $break-medium) {
-  .menu {
-    display: block;
-  }
-
-  .l-site {
-    &.is-open {
-      overflow: hidden;
-
-      .l-page {
-        @include transform(translateX($nav-width));
-      }
-    }
-  }
-
-  .l-page {
-    margin-left: 0;
-    z-index: 3;
-  }
-
-  .l-nav {
-    z-index: 2;
-  }
-
-  .band-container {
-    padding: 0 1.5em;
-  }
-}
+// @media screen and (max-width: $break-medium) {
+//   .menu {
+//     display: block;
+//   }
+//
+//   .l-site {
+//     &.is-open {
+//       overflow: hidden;
+//
+//       .l-page {
+//         @include transform(translateX($nav-width));
+//       }
+//     }
+//   }
+//
+//   .l-page {
+//     margin-left: 0;
+//     z-index: 3;
+//   }
+//
+//   .l-nav {
+//     z-index: 2;
+//   }
+//
+//   .band-container {
+//     padding: 0 1.5em;
+//   }
+// }
 
 // nav {
 //   height: 50px;

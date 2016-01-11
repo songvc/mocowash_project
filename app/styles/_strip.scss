@@ -8,7 +8,7 @@
   border-top: solid white 1px;
   border-bottom: solid white 1px;
   font-family:"Arial", sans-serif;
-  padding: 3px 0;
+  padding: 15px 0;
   background-color: #2DDC27;
   color:white;
   text-align: center;
@@ -19,7 +19,8 @@
     -webkit-font-smoothing: antialiased;
     font-weight:700;
     display:inline-block;
-    margin-bottom: 5px;
+    vertical-align: middle;
+    margin-right: 2%;
   }
 
   button {
@@ -31,6 +32,7 @@
     border-style: solid;
     border-color: white;
     border-width: 1.5px;
+    margin:5px 0px;
     height:50px;
     width:200px;
     font-size:15px;
@@ -42,10 +44,7 @@
 }
 
 @media (min-width:$small-screen-size) {
-  .top-strip {
-    span {
-      margin-right: 2%;
-    }
-
+  .bottom-strip {
+    padding: 1px 0;
   }
 }

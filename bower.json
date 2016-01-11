@@ -2,7 +2,8 @@
   "name": "day3",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "lightbox2": "~2.8.2"
   },
   "devDependencies": {
     "chai": "~3.4.2",
