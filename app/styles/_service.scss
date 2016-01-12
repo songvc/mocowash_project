@@ -1,101 +1,25 @@
 .service {
-  padding: 30px 15px 30px 15px;
-	overflow: hidden;
-	text-align: center;
-	background-color: white;
+	background-color: #F3F3F5;
+}
 
-	hr {
-		border-color: $font-color;
-	}
+.container {
+  border:1px solid black;
 
-	.service-h2 {
-		text-transform: uppercase;
-		color: $font-color;
-	}
-
-  .service-title {
-    color: $font-color;
+  display:flex;
+  flex-direction:row;
+  // justify-content: space-between;
+  section {
+    // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    margin:15px;
+    width:30%;
+    height:350px;
+    border: 1px solid black;
+    background-color: white;
+    // justfy-content: flex-start;
+    // background-color:black;
   }
 
-	section {
-		width:99%;
-    margin: 1%;
-    height:400px;
-		float:left;
-    position:relative;
-    // border-radius: 3px;
-    // border-width: 1px;
-
-    .service-box {
-      // border-radius: 3px;
-      // border-width: 1px;
-      // border-color:black;
-      height:100%;
-      width:100%;
-      z-index:1;
-      padding:25px;
-      position:absolute;
-      top:0;
-      left:0;
-      background-color: white;
-      cursor:pointer;
-      display:block;
-      // transition: opacity 1000ms;
-      // opacity:1;
-    }
-
-    .service-price {
-      width:100%;
-      height:90%;
-      position:absolute;
-      top:0;
-      left:0;
-      z-index:0;
-      cursor:pointer;
-
-      h4 {
-        font-size:1em;
-        color:$font-color;
-        border-style:solid;
-        border-radius: 0px 0px 3px 3px;
-        border-width:1px;
-        border-color: $font-color;
-        padding:10px 30px 10px 30px;
-      }
-    }
-
-    h1 {
-			color:$font-color;
-			text-transform: uppercase;
-			padding:15px 0px;
-		}
-
-		p {
-			color:$font-color;
-			padding:15px 0px;
-			text-align:justify;
-		}
-
-    .service-logo {
-      height:50%;
-      width:50%;
-      position:absolute;
-  		display:block;
-  		top:25%;
-  		left:25%;
-
-      path, polygon, circle, ellipse {
-        fill:$font-color;
-      }
-    }
-	}
 }
-
-.hidden {
-  opacity: 0;
-}
-
-
 @media (min-width: $small-screen-size) {
 	.service section {
 		width:50%;
@@ -119,3 +43,128 @@
 
 	}
 }
+// .service {
+//   padding: 30px 15px 30px 15px;
+// 	overflow: hidden;
+// 	text-align: center;
+// 	background-color: #F3F3F5;
+//
+// 	hr {
+// 		border-color: $font-color;
+// 	}
+//
+// 	.service-h2 {
+// 		text-transform: uppercase;
+// 		color: $font-color;
+// 	}
+//
+//   .service-title {
+//     color: $font-color;
+//   }
+//
+// 	section {
+// 		width:99%;
+//     margin: 1%;
+//     height:400px;
+// 		float:left;
+//     position:relative;
+//     // border-radius: 3px;
+//     // border-width: 1px;
+//
+//     .service-box {
+//       // border-radius: 3px;
+//       // border-width: 1px;
+//       // border-color:black;
+//       height:100%;
+//       width:100%;
+//       z-index:1;
+//       padding:25px;
+//       position:absolute;
+//       top:0;
+//       left:0;
+//       background-color: white;
+//       cursor:pointer;
+//       display:block;
+//       // transition: opacity 1000ms;
+//       // opacity:1;
+//     }
+//
+//     .service-price {
+//       width:100%;
+//       height:90%;
+//       position:absolute;
+//       top:0;
+//       left:0;
+//       z-index:0;
+//       cursor:pointer;
+//
+//       h4 {
+//         font-size:1em;
+//         color:$font-color;
+//         border-style:solid;
+//         border-radius: 0px 0px 3px 3px;
+//         border-width:1px;
+//         border-color: $font-color;
+//         padding:10px 30px 10px 30px;
+//         text-align: left;
+//       }
+//     }
+//
+//     h1 {
+// 			color:$font-color;
+// 			text-transform: uppercase;
+// 			padding:15px 0px;
+// 		}
+//
+// 		p {
+// 			color:$font-color;
+// 			padding:15px 0px;
+// 			text-align:justify;
+// 		}
+//
+//     .service-logo {
+//       height:50%;
+//       width:50%;
+//       position:absolute;
+//   		display:block;
+//   		top:25%;
+//   		left:25%;
+//
+//       path, polygon, circle, ellipse {
+//         fill:$font-color;
+//       }
+//     }
+// 	}
+//
+//
+//
+// }
+//
+// .hidden {
+//   opacity: 0;
+// }
+//
+//
+// @media (min-width: $small-screen-size) {
+// 	.service section {
+// 		width:50%;
+// 		margin:2px auto;
+// 	}
+//   .service h2 {
+//     font-size:1.6em;
+//   }
+// }
+//
+// @media (min-width: $medium-screen-size) {
+//   .service h2 {
+//     font-size:1.6em;
+//   }
+// }
+//
+// @media (min-width: $large-screen-size) {
+//
+// 	.service section {
+// 		width:33.3333%;
+//
+// 	}
+// }

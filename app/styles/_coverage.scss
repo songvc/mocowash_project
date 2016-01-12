@@ -21,21 +21,24 @@
 
 #contact .fancy-box {
   max-width:100%;
-  padding:5px;
-  border-radius: 4px;
-  background-color: white;
+  padding:2px;
   display:none;
   position:fixed;
   left:0;
   right:0;
   top:0;
   margin:0 auto;
-  z-index:99;
+  z-index:10;
   margin-top:20%;
 
   img {
     height:100%;
     width:100%;
+    border-radius: 4px;
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
   }
 
   &:before {
@@ -77,6 +80,6 @@
 @media (min-width: $break-medium){
   #contact .fancy-box {
     max-width:50%;
-    @include transform(translateX(140px));
+    // @include transform(translateX(140px));
   }
 }

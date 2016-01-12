@@ -7,6 +7,7 @@
 .fixed-width {
   max-width:$large-screen-size;
   margin:auto;
+  overflow:inherit;
 }
 
 .clearfix:after {
@@ -16,44 +17,4 @@
 	content: " ";
 	clear: both;
 	height: 0;
-}
-
-
-.l-site {
-  margin: 0 auto;
-  max-width: $site-width;
-  position: relative;
-  z-index: 1;
-
-  &:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 50%;
-    display: block;
-    background: #3a4043;
-    z-index: 1;
-  }
-}
-
-.l-page {
-  position: relative;
-  margin-left: $nav-width;
-  background: #fff;
-  z-index: 2;
-  // box-shadow: 1px 0 25px rgba(0,0,0,0.25);
-  @include transition(0.35s);
-}
-
-.l-nav {
-  position: absolute;
-  width: $nav-width;
-  display: block;
-  background: #3a4043;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
 }
