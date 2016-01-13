@@ -69,15 +69,15 @@ $(document).ready(function(){
 
 
 	// toggle for service & show price
-	$servicebox.click(function(e){
-		e.preventDefault();
-		$(this).fadeOut(300);
-	});
-
-	$serviceprice.click(function(e){
-		e.preventDefault();
-		$(this).prev().fadeIn(300);
-	});
+	// $servicebox.click(function(e){
+	// 	e.preventDefault();
+	// 	$(this).fadeOut(300);
+	// });
+	//
+	// $serviceprice.click(function(e){
+	// 	e.preventDefault();
+	// 	$(this).prev().fadeIn(300);
+	// });
 
 	// // fixed navbar animation
 	// $window.scroll(function(){
