@@ -1,85 +1,68 @@
 
-.contact {
-  background-color:#2DDC27;
-  text-align: center;
-  padding:40px 0px;
+#google-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: $background;
 
-  .contact-content {
-    h2 {
-      color:white;
+    @include MQ(M) {
+    	height: 300px;
     }
-    button {
-      color:white;
-      margin-top: 20px;
-      &:hover {
-        color:white;
-        background-color:#5A9958;
-      }
+
+    @include MQ(L) {
+    	height: 600px;
     }
-  }
 }
 
-#contact .fancy-box {
-  max-width:100%;
-  padding:2px;
-  display:none;
-  position:fixed;
-  left:0;
-  right:0;
-  top:0;
-  margin:0 auto;
-  z-index:10;
-  margin-top:20%;
+#cd-google-map {
+	position: relative;
 
-  img {
-    height:100%;
-    width:100%;
-    border-radius: 4px;
-    border-color: white;
-    border-style: solid;
-    border-width: 5px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-  }
+	address {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		padding: 1em 1em;
+		background-color: rgba($color-2, .9);
+		color: $color-3;
+		@include font-size(13px);
 
-  &:before {
-    content: "";
-    position:fixed;
-    background-color:rgba(0,0,0,.8);
-    bottom:0px;
-    right:0px;
-    left:0px;
-    height:100%;
-    weight:100%;
-    z-index:-1;
-  }
-
+		@include MQ(M) {
+			@include font-size(15px);
+			text-align: center;
+		}
+	}
 }
 
+#cd-zoom-in, #cd-zoom-out {
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+	margin-left: 10px;
+	background-color: rgba($color-2, .9);
+	background-repeat: no-repeat;
+	background-size: 32px 64px;
+	background-image: url('../img/cd-icon-controller.svg');
 
-@media (min-width: $small-screen-size) {
-  #contact .fancy-box {
-    max-width:80%;
-    margin-top:15%;
-  }
+	.no-touch &:hover {
+		background-color: rgba($color-2, 1);
+	}
+
+	@include MQ(M) {
+		margin-left: 50px;
+	}
 }
 
-@media (min-width: $medium-screen-size) {
-  #contact .fancy-box {
-    max-width:70%;
-    margin-top:10%;
-  }
+#cd-zoom-in {
+	background-position: 50% 0;
+	margin-top: 10px;
+	margin-bottom: 1px;
+
+	@include MQ(M) {
+		margin-top: 50px;
+	}
 }
 
-@media (min-width: $large-screen-size) {
-  #contact .fancy-box {
-    max-width:60%;
-    margin-top:5%;
-  }
-}
-
-@media (min-width: $break-medium){
-  #contact .fancy-box {
-    max-width:50%;
-    // @include transform(translateX(140px));
-  }
+#cd-zoom-out {
+	background-position: 50% -32px;
 }

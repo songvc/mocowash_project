@@ -6,17 +6,18 @@
 .container {
   display:flex;
   flex-flow: column wrap;
-  align-content: stretch;
+  // align-content: stretch;
   padding:5px;
   justify-content: space-between;
 
   section {
     position:relative;
     text-align: center;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     margin:5px;
     height:310px;
-    flex: 1 1 auto;
+		// max-height:50vw;
+    flex: 1;
     background-color: white;
     border-radius: .25em .25em .25em .25em;
 
@@ -24,6 +25,10 @@
       white-space: nowrap;
       font-size:2em;
     }
+
+		h5 {
+			color:#8899A6;
+		}
 
     &::before {
       // content:'See Price';
@@ -62,7 +67,8 @@
 }
 
 .service-box {
-  padding:35px 0px;
+  padding:20px;
+	// text-align: left;
   svg {
     margin:15px 0px;
     width:100%;
@@ -78,7 +84,7 @@
     flex-flow: row wrap;
     // width:50%;
     section {
-      flex: 1 1 48%;
+      flex: 1 0 48%;
       h2 {
         font-size:1.6em;
       }

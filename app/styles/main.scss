@@ -1,6 +1,10 @@
 //burbon
 @import "bourbon";
 
+* {
+  border: 1px black solid;
+}
+
 // Base Helpers
 @import "_mixins";
 @import "_reset";
@@ -14,7 +18,10 @@
 // Components
 @import "_button";
 @import "_ribbon";
+@import "_banner";
+@import "_schedule";
 @import "_pricechart";
+@import "_timeline";
 @import "_navbar";
 @import "_jumbotron";
 @import "_about";

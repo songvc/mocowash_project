@@ -5,6 +5,11 @@ html {
   box-sizing: inherit;
 }
 
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 img {
   display:block;
 }

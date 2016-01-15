@@ -1,0 +1,19 @@
+#banner {
+
+  .banner-container {
+    display:flex;
+    flex-flow: row nowrap;
+
+  }
+
+  ul li {
+    flex:1 auto;
+    width:50px;
+    height:150px;
+    // min-height::10vw;
+    max-height:20vw;
+    background-color: blue;
+    border: white 1px solid;
+  }
+
+}
