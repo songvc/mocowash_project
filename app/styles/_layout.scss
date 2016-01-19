@@ -21,6 +21,7 @@
 .about-fixed-width {
   padding:50px 0px;
 }
+
 #schedule {
   padding:50px 0px;
 }
@@ -29,5 +30,19 @@
 }
 #faq {
   padding:50px 0px;
+}
 
+@media (min-width: $large-screen-size) {
+  .about-fixed-width {
+    padding:75px 0px;
+  }
+  #schedule {
+    padding:75px 0px;
+  }
+  #services {
+    padding:75px 0px;
+  }
+  #faq {
+    padding:75px 0px;
+  }
 }

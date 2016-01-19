@@ -64,6 +64,7 @@ Main components
 -------------------------------- */
 
 .cd-faq {
+  padding:0 10px;
 	width: 100%;
 	max-width: $L;
 	box-shadow: 0 1px 5px rgba(#000, .1);
@@ -72,13 +73,15 @@ Main components
 
 	@include MQ(M) {
     width: 100%;
-		position: relative; 
+		position: relative;
 		margin: 4em auto;
 		box-shadow: none;
 	}
 }
 
 .cd-faq-categories {
+  // width:90%;
+  margin:auto;
 
 	a {
 		position: relative;
@@ -117,7 +120,7 @@ Main components
 	@include MQ(M) {
 		width: 20%;
 		float: left;
-		box-shadow: 0 1px 2px rgba(#000, .08);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 
 		a {
 			@include font-size(13px);
@@ -157,7 +160,7 @@ Main components
 			left: 0;
 			height: 100%;
 			width: 3px;
-			background-color: $color-2;
+			background-color: #2DDC27;
 			opacity: 0;
 			@include transition(opacity .2s);
 		}
@@ -201,7 +204,7 @@ Main components
 
 	&.slide-in {
 		@include transform(translateZ(0) translateX(0%));
-    z-index:2;
+    z-index:5;
 	}
 
 	.no-js & {
@@ -314,7 +317,7 @@ Main components
 		> li {
 			background: $color-5;
 			margin-bottom: 6px;
-			box-shadow: 0 1px 2px rgba(#000, .08);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 			@include transition(box-shadow .2s);
 
 			.no-touch &:hover {
@@ -351,7 +354,7 @@ Main components
 			top: 50%;
 			height: 2px;
 			width: 13px;
-			background: lighten($color-2, 20%);
+			background: #2DDC27;
 			-webkit-backface-visibility: hidden;
 			backface-visibility: hidden;
 			@include transition-property(transform);

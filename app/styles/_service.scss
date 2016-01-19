@@ -1,5 +1,5 @@
 .service {
-	background-color: #e7e4e6;
+	background-color: rgb(221, 225, 230);
 }
 
 .service-container {
@@ -15,8 +15,10 @@
     margin:5px;
     height:310px;
     flex: 1;
-    background-color: white;
-    border-radius: .25em .25em .25em .25em;
+		border-radius: 15px;
+		background-clip: padding-box;
+		border-radius: 5em 5em .25em .25em;
+
 
     h2 {
       white-space: nowrap;
@@ -71,6 +73,7 @@
 }
 
 .service-box {
+	// border-radius: 5em 5em .25em .25em;
 	position:absolute;
 	z-index:2;
 	height:80%;

@@ -17,9 +17,7 @@ img {
 body {
   margin: 0;
   padding: 0;
-  // background-color: #F9F9F9;
-  // font-family: "Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;
-  // font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+  font-family: arial;
 }
 
 h1,h2,h3,h4,h5,p {
@@ -37,8 +35,12 @@ hr {
 	border-width:3px;
 }
 
+a {
+  color:white;
+}
+
 .page-title {
-  color:black;
+  color:#454545;
   margin-bottom:50px;
   text-transform: uppercase;
   font-family:arial;
@@ -48,16 +50,27 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  text-shadow: 1px 1px 1px white;
-
+  text-shadow: 2px 2px 2px white;
  }
+
+
 
 .page-title::before,
 .page-title::after {
   flex-grow: 1;
   height: 1px;
   content: '\a0';
-  background-color: #ddd;
+  background-color: rgb(179, 179, 179);
   position: relative;
   top: 0.5em;
 }
+
+// .page-title::before,
+// .page-title::after {
+//   flex-grow: 1;
+//   height: 2px;
+//   content: '\a0';
+//   background-color: #ddd;
+//   position: relative;
+//   top: 0.5em;
+// }
