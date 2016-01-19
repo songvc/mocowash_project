@@ -27,32 +27,37 @@ h1,h2,h3,h4,h5,p {
   padding:0;
 }
 
-// a {
-//   text-decoration: none;
-//   color:white;
-//   font-size:16px;
-//   font-weight: lighter;
-//
-//   &:visited {
-//     color:white;
-//     text-decoration:none;
-//   }
-//   &:hover {
-//     color: white;
-//     opacity: 0.3;
-//     transition: opacity 0.2s linear, color 0.2s linear;
-//   }
-//   &:active {
-//     color:black;
-//   }
-// }
-
 ol, ul {
     list-style: none;
 }
 
 hr {
 	width:40%;
-	margin: 20px auto;
+	margin: 10px auto;
 	border-width:3px;
+}
+
+.page-title {
+  color:black;
+  margin-bottom:50px;
+  text-transform: uppercase;
+  font-family:arial;
+  letter-spacing: -0.01em;
+  font-size:3em;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-shadow: 1px 1px 1px white;
+
+ }
+
+.page-title::before,
+.page-title::after {
+  flex-grow: 1;
+  height: 1px;
+  content: '\a0';
+  background-color: #ddd;
+  position: relative;
+  top: 0.5em;
 }

@@ -1,12 +1,10 @@
 .service {
-	background-color: #F3F3F5;
-  padding: 100px 0px;
+	background-color: #e7e4e6;
 }
 
-.container {
+.service-container {
   display:flex;
   flex-flow: column wrap;
-  // align-content: stretch;
   padding:5px;
   justify-content: space-between;
 
@@ -16,59 +14,68 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     margin:5px;
     height:310px;
-		// max-height:50vw;
     flex: 1;
     background-color: white;
     border-radius: .25em .25em .25em .25em;
 
     h2 {
       white-space: nowrap;
-      font-size:2em;
+      font-size:1.5em;
+			font-family: arial;
+			text-transform: uppercase;
+			letter-spacing: -0.03em;
     }
 
 		h5 {
-			color:#8899A6;
+			color:lighten(#42464B,20%);
 		}
 
-    &::before {
-      // content:'See Price';
-      position:absolute;
-      bottom:0;
-      left:50%;
-      z-index:2;
-    }
-
-    // &::after {
-    //   content:'';
-    //   position:absolute;
-    //   bottom:0px;
-    //   left:0px;
-    //   height:20%;
-    //   width:100%;
-    //   background-color: #0A90E6;
-    //   border-radius: 0em 0em .25em .25em;
-    // }
-    .bottom {
+    .service-bottom {
       position:absolute;
       bottom:0px;
       left:0px;
       height:50px;
       width:100%;
       color:white;
-      letter-spacing: 2px;
+			font-family: arial;
+			text-transform: uppercase;
+      letter-spacing: -0.02em;
       font-size:1.0em;
       padding:15px 0px;
       background-color: #0A90E6;
       border-radius: 0em 0em .25em .25em;
       cursor:pointer;
-
     }
+
+    .service-price {
+			position:absolute;
+      width:100%;
+      height:330px;
+      top:0;
+      left:0;
+      cursor:pointer;
+
+      h4 {
+        font-size:1em;
+        color:$font-color;
+        border-style:solid;
+        border-radius: 0px 0px 3px 3px;
+        border-width:1px;
+        border-color: $font-color;
+        padding:10px 30px 10px 30px;
+        text-align: left;
+      }
+    }
+
   }
 }
 
 .service-box {
+	position:absolute;
+	z-index:2;
+	height:80%;
+	background-color: white;
   padding:20px;
-	// text-align: left;
   svg {
     margin:15px 0px;
     width:100%;
@@ -80,24 +87,24 @@
 }
 
 @media (min-width: $small-screen-size) {
-  .container {
+  .service-container {
     flex-flow: row wrap;
     // width:50%;
     section {
       flex: 1 0 48%;
       h2 {
-        font-size:1.6em;
+        font-size:1.28em;
       }
     }
   }
 }
 
 @media (min-width: $medium-screen-size) {
-  .container {
+  .service-container {
     padding:5px;
     section {
       margin:5px;
-      flex: 1 1 30%;
+      flex: 1 1 48%;
       h2 {
         font-size:1.5em
       }
@@ -106,137 +113,14 @@
 }
 
 @media (min-width: $large-screen-size) {
-  .container {
+  .service-container {
     padding:0px;
     section {
-      margin:5px;
       flex: 1 1 30%;
+
+			h2 {
+				font-size:1.3em;
+			}
     }
   }
 }
-
-// .service {
-//   padding: 30px 15px 30px 15px;
-// 	overflow: hidden;
-// 	text-align: center;
-// 	background-color: #F3F3F5;
-//
-// 	hr {
-// 		border-color: $font-color;
-// 	}
-//
-// 	.service-h2 {
-// 		text-transform: uppercase;
-// 		color: $font-color;
-// 	}
-//
-//   .service-title {
-//     color: $font-color;
-//   }
-//
-// 	section {
-// 		width:99%;
-//     margin: 1%;
-//     height:400px;
-// 		float:left;
-//     position:relative;
-//     // border-radius: 3px;
-//     // border-width: 1px;
-//
-//     .service-box {
-//       // border-radius: 3px;
-//       // border-width: 1px;
-//       // border-color:black;
-//       height:100%;
-//       width:100%;
-//       z-index:1;
-//       padding:25px;
-//       position:absolute;
-//       top:0;
-//       left:0;
-//       background-color: white;
-//       cursor:pointer;
-//       display:block;
-//       // transition: opacity 1000ms;
-//       // opacity:1;
-//     }
-//
-//     .service-price {
-//       width:100%;
-//       height:90%;
-//       position:absolute;
-//       top:0;
-//       left:0;
-//       z-index:0;
-//       cursor:pointer;
-//
-//       h4 {
-//         font-size:1em;
-//         color:$font-color;
-//         border-style:solid;
-//         border-radius: 0px 0px 3px 3px;
-//         border-width:1px;
-//         border-color: $font-color;
-//         padding:10px 30px 10px 30px;
-//         text-align: left;
-//       }
-//     }
-//
-//     h1 {
-// 			color:$font-color;
-// 			text-transform: uppercase;
-// 			padding:15px 0px;
-// 		}
-//
-// 		p {
-// 			color:$font-color;
-// 			padding:15px 0px;
-// 			text-align:justify;
-// 		}
-//
-//     .service-logo {
-//       height:50%;
-//       width:50%;
-//       position:absolute;
-//   		display:block;
-//   		top:25%;
-//   		left:25%;
-//
-//       path, polygon, circle, ellipse {
-//         fill:$font-color;
-//       }
-//     }
-// 	}
-//
-//
-//
-// }
-//
-// .hidden {
-//   opacity: 0;
-// }
-//
-//
-// @media (min-width: $small-screen-size) {
-// 	.service section {
-// 		width:50%;
-// 		margin:2px auto;
-// 	}
-//   .service h2 {
-//     font-size:1.6em;
-//   }
-// }
-//
-// @media (min-width: $medium-screen-size) {
-//   .service h2 {
-//     font-size:1.6em;
-//   }
-// }
-//
-// @media (min-width: $large-screen-size) {
-//
-// 	.service section {
-// 		width:33.3333%;
-//
-// 	}
-// }

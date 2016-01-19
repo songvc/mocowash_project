@@ -1,21 +1,24 @@
+
+
 #newspaper-c {
-  background-color:#0BA0FF;
-  color:white;
+  background-color:white;
+  color:black;
 	width: 100%;
   height:80%;
-  font-size:1.2em;
 }
 
 #newspaper-c th {
 	padding: 20px 0;
 	font-weight: normal;
   text-align: center;
-	text-transform: uppercase;
   font-size:1em;
 }
 
-#newspaper-c thead {
-
+#newspaper-c td {
+  font-size:1.2em;
+  font-family:arial;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
 }
 
 #newspaper-c tbody td:nth-child(1) {
@@ -33,7 +36,6 @@
 }
 
 .col2 #newspaper-c .special-price {
-  // text-decoration: line-through;
   position: relative;
   &:after {
     position: absolute;
@@ -51,25 +53,23 @@
     -o-transform:rotate(-35deg);
     transform:rotate(-35deg);
   }
-  .discount {
-    // color:red;
-  }
+
 }
 
 @media (min-width: $small-screen-size) {
-  #newspaper-c {
-    font-size:1.1em;
+  #newspaper-c td {
+    font-size:1.0em;
   }
 }
 
 @media (min-width: $medium-screen-size) {
-  #newspaper-c {
+  #newspaper-c td {
     font-size:1.2em;
   }
 }
 
 @media (min-width: $large-screen-size) {
-  #newspaper-c {
-    font-size:1.3em;
+  #newspaper-c td {
+    font-size:1.0em;
   }
 }

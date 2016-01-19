@@ -35,7 +35,9 @@ function lint(files, options) {
 }
 const lintOptions = {
   "globals": {
-    "$": true
+    "$": true,
+    "allowShortCircuit":true,
+    "allowTernary:":true
   }
 }
 const testLintOptions = {

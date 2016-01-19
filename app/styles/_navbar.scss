@@ -1,308 +1,77 @@
-
-nav {
-  height: 50px;
-  width: 100%;
+.navbar {
 	position:fixed;
-	z-index:3;
-	background-image: linear-gradient(to bottom,rgba(25,25,25,0.95),transparent);
-	transition: background-color 0.5s,box-shadow 0.5s;
-}
+	z-index:8;
+	width:100%;
 
-nav ul {
-  padding: 0;
-  margin: 0 auto;
-  float:right;
-  height: 50px;
-}
-
-nav li {
-  display: inline;
-  float: left;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-.clearfix:after {
-    clear: both;
-}
-.clearfix {
-    *zoom: 1;
-}
-
-.logo-icon {
-	display:inline-block;
-	height:28px;
-	width:auto;
-	float:left;
-	margin-top: 8px;
-	margin-left: 15px;
-}
-
-.logo {
-	font-family:"Ubuntu"!important;
-	font-size:1.618em;
-	margin-left: 5px;
-	line-height: 45px;
-
-	.moco {
-		color:#30EA29;
-	}
-	color:#009BFF;
-}
-
-
-nav a {
-		color:black!important;
+  .toggle, .brand {
     display: inline-block;
-    width: 100px;
+  }
+
+  .link {
+    display: block;
+    width: 100%;
     text-align: center;
+    padding: 1em;
     text-decoration: none;
-    line-height: 50px;
-}
-
-// nav li a {
-//   // border-right: 1px solid #07B601;
-// }
-// nav li:last-child a {
-//   border-right: 0;
-// }
-
-nav a:hover, nav a:active {
-    // background-color: #07B601;
-}
-
-nav a#pull {
-    display: none;
-}
-
-@media only screen and (max-width : $medium-screen-size) {
-  nav {
-    border-bottom: 0;
-		height:auto;
+    &:hover,&:active {
+      background: lighten(#2DDC27,30%);
+    }
   }
-
-  nav ul {
-		width: 100%;
-    display: none;
-    height: auto;
-  }
-
-  nav li {
-		display:block;
-    width: 50%;
-    float: left;
-    position: relative;
-  }
-
-  nav a {
-      text-align: left;
-      width: 100%;
-      text-indent: 25px;
-  }
-
-  nav a#pull {
-      display: block;
-      // background-color: #283744;
-      width: 100%;
-      position: relative;
-  }
-
-	.is-collapsed {
-		display: none;
-	}
-
-	.logo-icon {
-		display:none;
-	}
-
-	.hamburger {
-		display:block;
+  .brand {
+		width: 12em;
 		text-align: center;
+		margin-left:10px;
+		img {
+			max-width:100%;
+			display:inline-block;
+		}
+  }
+  .toggle {
+    padding: 1em;
+    color: black;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 48em) {
+  .navbar {
+    display: flex;
+    .left,.right {
+      display: flex;
+      flex: 1;
+    }
+    .link {
+      width: auto;
+    }
+    .left,.right {
+      justify-content: flex-end;
+    }
+    .toggle {
+      display: none;
+    }
+		.brand {
+			margin-top:15px;
+		}
+  }
+}
+
+.navbar {
+  div {
+    display: none;
+    @media (min-width: 48em) {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+	.navbar.active {
+	  .toggle {
+	    background: black;
+	    color: white;
+	  }
+	  div {
+	    display: block;
+	  }
 	}
-
-  // nav a#pull:after {
-  //     content:"";
-  //     // background: url('/images/nav-icon.svg') no-repeat;
-  //     width: 30px;
-  //     height: 30px;
-  //     display: inline-block;
-	// 		// background-color: black;
-  //     position: absolute;
-  //     right: 15px;
-  //     top: 10px;
-  // }
 }
-
-@media only screen and (max-width : 320px) {
-    nav li {
-        display: block;
-        float: none;
-        width: 100%;
-    }
-    nav li a {
-        // border-bottom: 1px solid #576979;
-    }
-}
-
-
-// header {
-// 	z-index: 6;
-// 	position:fixed;
-// 	width:100%;
-// 	padding:5px;
-  // background-image: linear-gradient(to bottom,rgba(25,25,25,0.95),transparent);
-	// transition: background-color 0.5s,box-shadow 0.5s;
-// 	height:45px;
-// }
-//
-// nav {
-// 	overflow:auto;
-// }
-//
-// .logo-icon {
-// 	display:inline-block;
-// 	height:30px;
-// 	width:auto;
-// 	float:left;
-// }
-//
-// .logo {
-// 	font-family:"Ubuntu"!important;
-// 	font-size:1.618em;
-// 	margin-top:2px;
-// 	margin-left: 10px;
-// 	line-height: 25px;
-// 	vertical-align: middle;
-//
-// 	.moco {
-// 		color:#30EA29;
-// 	}
-// 	color:#009BFF;
-// 	float:left;
-// 	font-family: 'bdp', sans-serif;
-// }
-//
-// nav {
-// 	float:right;
-//
-// 	ul {
-//
-// 		li {
-// 			vertical-align: middle;
-// 			line-height: 55px;
-// 			display: inline-block;
-// 			// margin-left: 2%;
-// 			// margin-right: 2%;
-// 			padding: 0.5em 0.75714em;
-// 			overflow:hidden;
-// 			color: #ccc;
-// 			font-size: 1em;
-// 			line-height: 1.28571em;
-// 			// font-weight: bold;
-// 			outline: none;
-// 		}
-//
-// 	}
-//
-// 	.nav-list {
-// 		color: white;
-// 		font-weight:200;
-// 		text-transform: uppercase;
-// 		letter-spacing: 2px;
-// 	}
-// }
-//
-// .open-panel, .close-panel {
-// 	display:none;
-// }
-//
-// @media (max-width: $medium-screen-size) {
-// 	 /* Move nav off screen, setup transitions */
-// 	body {
-// 		background-color: #1B1C1D;
-// 	}
-//
-// 	header {
-// 		background-color: white;
-// 		background-color: transparent;
-// 		text-align: center;
-// 	}
-//
-// 	.logo {
-// 		float:none;
-// 		margin:0;
-// 		text-align: center;
-// 	}
-//
-// 	.logo-icon {
-// 		float:none;
-// 	}
-//
-// 	.nav-button {
-// 		float:left;
-// 	}
-//
-// 	nav {
-// 		width: 70%;
-// 		position: absolute;
-// 		left: -70%;
-// 		top: 0;
-// 		height: 100%;
-// 		overflow: inherit;
-//
-// 		ul {
-// 			text-align:left;
-// 			padding-left: 30px;
-//
-// 			li {
-// 				line-height:1;
-// 				width:100%;
-// 				margin: 15px 0px;
-// 			}
-// 		}
-// 	}
-// 	.fa-bars{
-// 		color: black;
-// 		margin: 50%;
-// 	}
-// 	.fa-times{
-// 		color:white;
-// 		margin-top:15px;
-// 		margin-left:-2.5px;
-// 		float:left;
-// 	}
-// 	.open-panel, .close-panel {
-// 		display: inline;
-// 	}
-// 	.openNav .top-container {
-// 		left: 0;
-// 		-webkit-transform: translate3d(70%, 0, 0);
-// 		-moz-transform: translate3d(70%, 0, 0);
-// 		-ms-transform: translate3d(70%, 0, 0);
-// 		-o-transform: translate3d(70%, 0, 0);
-// 		transform: translate3d(70%, 0, 0);
-// 		-webkit-transition: -webkit-transform 500ms ease;
-// 		-moz-transition: -moz-transform 500ms ease;
-// 		-o-transition: -o-transform 500ms ease;
-// 		transition: transform 500ms ease;
-// 	}
-// 	.top-container {
-// 		left: 0;
-// 		-webkit-transform: translate3d(0, 0, 0);
-// 		-moz-transform: translate3d(0, 0, 0);
-// 		-ms-transform: translate3d(0, 0, 0);
-// 		-o-transform: translate3d(0, 0, 0);
-// 		transform: translate3d(0, 0, 0);
-// 		-webkit-transition: -webkit-transform 500ms ease;
-// 		-moz-transition: -moz-transform 500ms ease;
-// 		-o-transition: -o-transform 500ms ease;
-// 		transition: transform 500ms ease;
-// 	}
-// }
-//
-// @media (min-width: $small-screen-size) {
-//
-// }

@@ -3,22 +3,17 @@ $small-screen-size: 34em;
 $medium-screen-size: 50em;
 $large-screen-size: 64em;
 
-$break-medium: 1200px;
-$nav-width: 240px;
-$site-width: 1600px;
+// $break-medium: 1200px;
+// $nav-width: 240px;
+// $site-width: 1600px;
 
-$color-1: #4e5359; // blue dark
-$color-2: #a9c056; // green
-$color-3: #f3f3f5; // grey light
+
+$color-1: #33414a; // Limed Spruce
+$color-2: #7e4d7e; // Strikemaster
+$color-3: #ffffff; // White
 $color-4: #6c7d8e; // blue light
 $color-5: #ffffff; // white
 
-// colors
-
-$main-text: #7f8c97; // main text
-$link: #acb7c0; // anchor tags
-$background: #e9f0f5; // body background color
-
-$S:     34em;
-$M:     50em;
-$L:     64em;
+$S:     480px;
+$M:     768px;
+$L:     1024px;

@@ -1,19 +1,43 @@
 #banner {
-
-  .banner-container {
     display:flex;
     flex-flow: row nowrap;
 
-  }
+    div {
+      flex:1;
+      height:15vw;
+      max-height::150px;
+      // background-color: white;
+      // border: black 1px solid;
+    }
 
-  ul li {
-    flex:1 auto;
-    width:50px;
-    height:150px;
-    // min-height::10vw;
-    max-height:20vw;
-    background-color: blue;
-    border: white 1px solid;
-  }
-
+    .badge-1 {
+      background-image: url("../images/yelp.png");
+      background-repeat: no-repeat;
+      background-size: 80% auto;
+      background-position: center;
+    }
+    .badge-2 {
+      background-image: url("../images/eco_voc_logo.jpeg");
+      background-repeat: no-repeat;
+      background-size: 70% auto;
+      background-position: center;
+    }
+    .badge-3 {
+      background-image: url("../images/pacific_carwash.png");
+      background-repeat: no-repeat;
+      background-size: 80% auto;
+      background-position: center;
+    }
+    .badge-4 {
+      background-image: url("../images/bbb_logo.png");
+      background-repeat: no-repeat;
+      background-size: 80% auto;
+      background-position: center;
+    }
+    .badge-5 {
+      background-image: url("../images/eco-friendly.png");
+      background-repeat: no-repeat;
+      background-size: 60% auto;
+      background-position: center;
+    }
 }

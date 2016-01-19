@@ -1,6 +1,88 @@
 #schedule {
-  section {
-    height:150px;
-    background-color: red;
+  background-color: #F3F3F5;
+  text-align: center;
+  color:black;
+
+  .schedule-title {
+    // border-bottom: 1px solid black;
+    margin: 10px 0 30px 0;
+
+    h1 {
+      letter-spacing: -0.05em;
+    }
+
+    h4 {
+      color:#42464B;
+      letter-spacing: -0.06em;
+    }
+  }
+
+  .schedule-container {
+    display:flex;
+    flex-flow: row wrap;
+
+    section {
+      background-color: white;
+      margin:5px;
+      position:relative;
+      flex: 1 100%;
+      padding:10px;
+      height:250px;
+      border-radius: .25em .25em .25em .25em;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+
+      ::before {
+        position:absolute;
+        content:"";
+        top:0;
+        left:0;
+        height:5px;
+        width:100%;
+        border-radius: .25em .25em 0em 0em;
+        background-color: #0A90E6;
+      }
+
+      .company-visit {
+        margin-top: 10px;
+        h5 {
+          margin-top: 2px;
+          color:#42464B;
+        }
+      }
+    }
+
+  }
+}
+
+@media (min-width: $small-screen-size) {
+   #schedule {
+     .schedule-container {
+       flex-flow: row wrap;
+       section {
+         flex: 1 49%;
+       }
+     }
+   }
+}
+
+@media (min-width: $medium-screen-size) {
+  #schedule {
+    .schedule-container {
+      flex-flow: row wrap;
+      section {
+        flex: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: $large-screen-size) {
+  #schedule {
+    .schedule-container {
+      flex-flow: row wrap;
+      section {
+        flex: 1;
+      }
+    }
   }
 }
