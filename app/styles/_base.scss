@@ -53,8 +53,6 @@ a {
   text-shadow: 2px 2px 2px white;
  }
 
-
-
 .page-title::before,
 .page-title::after {
   flex-grow: 1;
@@ -64,13 +62,3 @@ a {
   position: relative;
   top: 0.5em;
 }
-
-// .page-title::before,
-// .page-title::after {
-//   flex-grow: 1;
-//   height: 2px;
-//   content: '\a0';
-//   background-color: #ddd;
-//   position: relative;
-//   top: 0.5em;
-// }

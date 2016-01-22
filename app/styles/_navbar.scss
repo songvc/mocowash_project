@@ -1,6 +1,6 @@
 .navbar {
 	position:fixed;
-	z-index:3;
+	z-index:5;
 	width:100%;
 
   .toggle, .brand {
@@ -15,7 +15,7 @@
     text-decoration: none;
 		font-family: arial;
 		letter-spacing: -0.05em;
-		font-size:1em;
+		font-size: 1em;
 
     &:hover,&:active {
       background: lighten(#2DDC27,30%);
@@ -23,32 +23,18 @@
   }
   .brand {
 		position: absolute;
-		width: 14em;
+		width: 11em;
 		text-align: center;
 		transform: translateX(-50%);
 	  left: 50%;
-		margin-top:8px;
-
+		margin-top:10px;
+		margin-left:15px;
 		text-decoration: none;
 
 		img {
-			width:4em;
 			display:inline-block;
-			vertical-align:text-bottom;
+			max-width:100%;
 		}
-
-		.logo-text {
-			font-size:1.6em;
-			font-weight:bold;
-			color: #2DDC27;
-			font-family: AppleGothic;
-			text-shadow: 0.5px 0.5px 0.5px #000;
-
-			.wash {
-				color: #0A90E6;
-			}
-		}
-
   }
 
   .toggle {
@@ -56,6 +42,20 @@
     color: black;
     vertical-align: middle;
   }
+}
+
+.navbar {
+  @media (min-width: 48em) {
+    display: flex;
+  }
+
+	@media (max-width: 48em) {
+		div {
+			max-height:0;
+			overflow:hidden;
+			transition: max-height 0.8s;
+		}
+	}
 }
 
 @media (min-width: 48em) {
@@ -81,15 +81,6 @@
   }
 }
 
-.navbar {
-  div {
-    display: none;
-    @media (min-width: 48em) {
-      display: flex;
-    }
-  }
-}
-
 @media (max-width: 48em) {
 	.navbar.active {
 	  .toggle {
@@ -97,7 +88,8 @@
 	    color: white;
 	  }
 	  div {
-	    display: block;
+			max-height:400px;
+
 	  }
 	}
 }

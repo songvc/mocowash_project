@@ -5,7 +5,6 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Mocowash</title>
-		<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 		<!-- Place favicon.ico in the root directory -->
@@ -29,8 +28,7 @@
 		  <nav class="navbar">
 		    <a href="#" class="toggle"><i class="fa fa-reorder"></i></a>
 		    <a href="#" class="brand">
-		    	<img src="images/loco_moco_texts.png" alt="logo">
-					<span class="logo-text">moco<span class="wash">wash</span></span>
+		    	<img src="images/transparent.png" alt="logo">
 		    </a>
 		    <div class="right">
 					<a href="#home" class="link">HOME</a>
@@ -63,9 +61,9 @@
 								<div class="text-box">
 									<h1>Welcome to <span class="logo-letter">Mocowash</span></h1>
 									<hr>
-									<h3>Join us on our quest to save <span class="number">1 BILLION</span> <span class="letters">gallons of water!</span></h3>
+									<h3>Join us on our quest to save <span class="number">1 BILLION</span> gallons of water!</h3>
 									<hr>
-									<h5>At mocowash we understand that time and water are limited resources. Our objective is to save you time by offering our professional services while you work. With our use of eco friendly and waterless products we only use 5-10 oz of water per car!</h5>
+									<h5>At mocowash we understand that time and water are limited resources. Our objective is to save you time by offering our professional services while you work. With our use of eco friendly and waterless products we ONLY use 5-10 oz of water per car!</h5>
 								</div>
 								<div class="car-image">
 								</div>
@@ -73,7 +71,7 @@
 								<div id="banner" class="banner-container">
 									<div class="badge-1"></div>
 									<div class="badge-2"></div>
-									<div class="badge-3"></div>
+									<div class="badge-3"><a href="http://www.yelp.com/search?cflt=carwash&find_loc=San+Jose%2C+CA"></a></div>
 									<div class="badge-4"></div>
 									<div class="badge-5"></div>
 								</div>
@@ -89,7 +87,7 @@
 							<section class="bottom col3">
 								<div class="bottom-image-2">
 									<h2>Save water</h2>
-									<h5>We use only 5-10 oz. of water to wash each car. </h5>
+									<h5>We use ONLY 5-10 oz. of water to wash each car. </h5>
 								</div>
 							</section>
 
@@ -105,7 +103,7 @@
 
 			</div>
 
-			<div id="schedule">
+			<!-- <div id="schedule">
 				<h1 class="page-title">Schedule</h1>
 				<div class="fixed-width">
 					<div class="schedule-container">
@@ -162,7 +160,7 @@
 						</section>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 
 			<div class="service" id="services">
@@ -200,9 +198,7 @@
 								<h2 class="service-h2">Exterior Only</h2>
 								<h5>Full exterior wipe down using waterless wash with carnauba wax, tires dressed</h5>
 							</div>
-
 							<div class="service-bottom">See Detail</div>
-
 						</section>
 
 						<section class="col2">
@@ -459,16 +455,6 @@
 				</div>
 			</div>
 
-			<div id="contact" class="fixed-width">
-				<section id="cd-google-map">
-					<div id="google-container"></div>
-					<div id="cd-zoom-in"></div>
-					<div id="cd-zoom-out"></div>
-					<!-- <address>86-90 Paul Street, London, EC2A 4NE</address> -->
-				</section>
-			</div>
-
-
 			<footer>
 				<div class="footer-bottom">
 					<h2>Join Us On</h2>
@@ -491,22 +477,28 @@
 					<div class="modal-header">
 						<h1>Join Us</h1>
 					</div>
-					<div class="modal-body">
-						<label for="">First Name</label>
-						<input type="text">
-						<label for="">Last Name</label>
-						<input type="text">
-						<label for="">E-mail</label>
-						<input type="text">
-						<label for="">Phone Number</label>
-						<input type="text">
-						<label for="">Company</label>
-						<input type="text">
-					</div>
-					<div class="modal-footer">
-						<button class="close">Cancel</button>
-						<button class="submit">Send</button>
-					</div>
+					<form id="contactform" method="POST">
+						<div class="modal-body">
+								<label for="">First Name</label>
+								<input id ="firstname" type="text">
+								<label for="">Last Name</label>
+								<input id ="lastname" type="text">
+								<label for="">E-mail</label>
+								<input id ="email" type="text">
+								<label for="">Phone Number</label>
+								<input id ="phone" type="text">
+								<label for="">Company Name</label>
+								<input id ="company" type="text">
+								<label for="">Company Address</label>
+								<input id ="address" type="text">
+								<input type="text" name="_gotcha" style="display:none" />
+								<input type="hidden" name="_subject" value="Website contact" />
+						</div>
+						<div class="modal-footer">
+							<button class="close">Cancel</button>
+							<button class="submit" type="submit">Send</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

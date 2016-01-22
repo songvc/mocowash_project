@@ -21,10 +21,20 @@
       background-position: center;
     }
     .badge-3 {
-      background-image: url("../images/pacific_carwash.png");
+      position:relative;
+      background-image: url("../images/pacific2.png");
       background-repeat: no-repeat;
       background-size: 80% auto;
       background-position: center;
+      a {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:2;
+        text-decoration: none;
+        height:100%;
+        width:100%;
+      }
     }
     .badge-4 {
       background-image: url("../images/bbb_logo.png");

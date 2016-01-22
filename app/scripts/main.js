@@ -9,6 +9,10 @@ $(document).ready(function(){
 	var $modal = $('.modal');
 	var $servicebottom = $('.service-bottom');
 
+	var contactform =  document.getElementById('contactform');
+	contactform.setAttribute('action', '//formspree.io/' + 'will' + '@' + 'mocowash' + '.' + 'com');
+
+
 	// toggle nav menu
 	$toggle.on('click', function(e) {
 		e.preventDefault();

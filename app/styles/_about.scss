@@ -33,10 +33,10 @@
 					font-family: arial;
 					text-align: center;
 					text-transform: uppercase;
-					font-size:3.5em;
+					font-size:3.2em;
 					line-height:1em;
-					color:#2DDC27;
-					letter-spacing: -0.1em;
+					color:$green;
+					letter-spacing: -0.06em;
 					text-shadow: 1px 1px 1px #000;
 				}
 
@@ -44,12 +44,11 @@
 					font-family: arial;
 					text-align: center;
 					text-transform: uppercase;
-					font-size:1.4em;
+					font-size:1.3em;
 					letter-spacing: -0.05em;
 				}
 
 				h5 {
-					// color:#8899A6;
 					font-size:1em;
 				}
 
@@ -57,11 +56,15 @@
 					width:100%;
 				}
 
+				.number {
+					display:inline-block;;
+				}
+
 			}
 
 
 				.logo-letter {
-					color: #0A90E6;
+					color: $blue;
 				}
 
 			.car-image {
@@ -83,8 +86,7 @@
 				height:220px;
 				padding:15px;
 				h2 {
-					color:#2DDC27;
-					// color: #0A90E6;
+					color:$green;
 					font-family:arial;
 					text-transform: uppercase;;
 					letter-spacing: -0.06em;
@@ -139,7 +141,7 @@
 		.top .text-box {
 			width:95%;
 			h1 {
-				font-size:2.6em;
+				font-size:3.0em;
 				letter-spacing: -0.04em
 			}
 			h3 {
