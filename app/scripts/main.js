@@ -8,10 +8,10 @@ $(document).ready(function(){
 	var $toggle = $('.toggle');
 	var $modal = $('.modal');
 	var $servicebottom = $('.service-bottom');
-	var contactform = document.getElementById('contactform');
+	// var contactform = document.getElementById('contactform');
 
 	// more security for form element
-	contactform.setAttribute('action', '//formspree.io/' + 'will' + '@' + 'mocowash' + '.' + 'com');
+	// contactform.setAttribute('action', '//formspree.io/' + 'will' + '@' + 'mocowash' + '.' + 'com');
 
 
 	// toggle nav menu
