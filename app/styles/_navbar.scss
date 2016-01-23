@@ -53,7 +53,7 @@
 		div {
 			max-height:0;
 			overflow:hidden;
-			transition: max-height 0.8s;
+			transition: max-height 0.7s, background-color 0.7s;
 		}
 	}
 }
@@ -84,12 +84,15 @@
 @media (max-width: 48em) {
 	.navbar.active {
 	  .toggle {
-			background: lighten(#2DDC27,30%);
-	    color: white;
+			background-color: white;
+			transition: background-color 0.7s;
 	  }
 	  div {
+			background-color: white;
 			max-height:400px;
-
 	  }
+		.link {
+			color:black!important;
+		}
 	}
 }

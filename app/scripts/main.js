@@ -8,8 +8,9 @@ $(document).ready(function(){
 	var $toggle = $('.toggle');
 	var $modal = $('.modal');
 	var $servicebottom = $('.service-bottom');
+	var contactform = document.getElementById('contactform');
 
-	var contactform =  document.getElementById('contactform');
+	// more security for form element
 	contactform.setAttribute('action', '//formspree.io/' + 'will' + '@' + 'mocowash' + '.' + 'com');
 
 
@@ -33,22 +34,6 @@ $(document).ready(function(){
 		e.preventDefault();
 		$modal.hide();
 	});
-
-	// wiring map buttons
-	$('.map-btn').click(function(e){
-		e.preventDefault();
-		$('#contact .fancy-box').css({
-			'display': 'block'
-		});
-	});
-
-	$('.fancy-box img').click(function(e){
-		e.preventDefault();
-		$('#contact .fancy-box').css({
-			'display': 'none'
-		});
-	});
-
 
 	// toggle for service & show price
 	$servicebottom.click(function(e){
