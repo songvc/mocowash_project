@@ -1,6 +1,10 @@
 //burbon
 @import "bourbon";
 
+* {
+  border: 1px solid black;
+}
+
 // Base Helpers
 @import "_mixins";
 @import "_reset";
