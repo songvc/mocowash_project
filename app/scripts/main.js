@@ -19,6 +19,25 @@ $(document).ready(function(){
 		e.preventDefault();
 		$toggle.parent().toggleClass('active');
 	});
+	// close nav if link is clicked
+	$link.on('click', function(e) {
+		e.preventDefault();
+		$toggle.parent().removeClass('active');
+	});
+	// smooth scrolling
+
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
 
 	// wiring buttons with modal
 	$('.btn').click(function(e){
