@@ -46,11 +46,11 @@
 }
 
 .navbar {
-  @media (min-width: 48em) {
+  @media (min-width: 47em) {
     display: flex;
   }
 
-	@media (max-width: 48em) {
+	@media (max-width: 47em) {
 		div {
 			max-height:0;
 			overflow:hidden;
@@ -59,7 +59,7 @@
 	}
 }
 
-@media (min-width: 48em) {
+@media (min-width: 47em) {
   .navbar {
     display: flex;
     .left,.right {
@@ -82,7 +82,7 @@
   }
 }
 
-@media (max-width: 48em) {
+@media (max-width: 47em) {
 	.navbar.active {
 	  .toggle {
 			background-color: white;
