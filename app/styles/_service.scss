@@ -3,6 +3,7 @@
 	background-image: url(../images/jumbo-picture.png);
 	background-position: center;
 	background-size: contain no-repeat;
+	background-position: right;
 }
 
 .service-container {
@@ -93,9 +94,12 @@
 }
 
 @media (min-width: $small-screen-size) {
+	.service {
+		background-position: center;
+	}
+
   .service-container {
     flex-flow: row wrap;
-    // width:50%;
     section {
       flex: 1 0 48%;
       h2 {
