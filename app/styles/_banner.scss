@@ -14,18 +14,20 @@
       background-size: 90%;
       background-position: center;
     }
+
     .badge-2 {
       background-image: url("../images/eco_voc_logo.jpeg");
       background-repeat: no-repeat;
       background-size: 80%;
       background-position: center;
     }
+
     .badge-3 {
-      flex:1.5;
+      flex:2;
       position:relative;
       background-image: url("../images/pacific2.png");
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 85% 100%;
       background-position: center;
       a {
         position:absolute;
