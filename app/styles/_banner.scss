@@ -21,10 +21,11 @@
       background-position: center;
     }
     .badge-3 {
+      flex:1.5;
       position:relative;
       background-image: url("../images/pacific2.png");
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: contain;
       background-position: center;
       a {
         position:absolute;
