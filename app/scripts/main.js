@@ -8,11 +8,6 @@ $(document).ready(function(){
 	var $toggle = $('.toggle');
 	var $modal = $('.modal');
 	var $servicebottom = $('.service-bottom');
-	// var contactform = document.getElementById('contactform');
-
-	// more security for form element
-	// contactform.setAttribute('action', '//formspree.io/' + 'will' + '@' + 'mocowash' + '.' + 'com');
-
 
 	// toggle nav menu
 	$toggle.on('click', function(e) {
@@ -33,7 +28,7 @@ $(document).ready(function(){
       if (target.length) {
         $('html,body').animate({
           scrollTop: target.offset().top
-        }, 1000);
+        }, 500);
         return false;
       }
     }

@@ -4,34 +4,32 @@
 
 		position:relative;
 		background-image: url(../images/waterbottle.png);
-		background-position:50% 50%;
-		background-size: contain no-repeat;
-		width:100%;
-		min-height:60vh;
+		background-position:center;
+		background-size: cover;
+		min-height:100vh;
 
 		.jumbotron-content {
-			transform:translateY(60%);
-			margin:0 auto;
-			width:95%;
-			max-width:1000px;
-			display:flex;
-			height:350px;
+			position:absolute;
+			width:90%;
+			top:35%;
+			margin: 0 auto;
+			left:50%;
+			transform:translatex(-50%);
+			max-width:950px;
 			align-items:flex-start;
 
 			h2 {
-				flex:1;
 				color: white;
 				text-shadow: #000 2px 2px 15px;
 			}
 
-			.filler-sentence {
-				flex:1.5;
-				// background-color: red;
-				// height:20px;
+			.first-sentence {
+				float:left;
 			}
 
 			.second-sentence {
-				align-self:flex-end;
+				margin-top:30vh;
+				float:right;
 			}
 
 			button {
@@ -50,21 +48,40 @@
 
 
 @media (min-width: $small-screen-size) {
-	.jumbotron-image {
-		background-position:100% 100%;
-	}
-	.jumbotron .jumbotron-content .filler-sentence {
-		flex:0.8!important;
+	.jumbotron .jumbotron-image {
+		min-height:90vh;
+
+		.jumbotron-content {
+
+			.second-sentence {
+				margin-top::25vh;
+			}
+		}
 	}
 }
 
 @media (min-width: $medium-screen-size) {
-	.jumbotron .jumbotron-content .filler-sentence {
-		flex:0.5!important;
+	.jumbotron .jumbotron-image {
+		min-height:80vh;
+
+		.jumbotron-content {
+			.second-sentence {
+				margin-top:20vh;
+				margin-right:1em;
+			}
+		}
 	}
 
 }
 
 @media (min-width: $large-screen-size) {
+	.jumbotron .jumbotron-image {
+		min-height:70vh;
+		.jumbotron-content {
+			.second-sentence {
+				margin-right:2em;
+			}
+		}
+	}
 
 }

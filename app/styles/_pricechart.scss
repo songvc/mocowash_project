@@ -36,27 +36,6 @@
   padding-bottom: 10px;
 }
 
-.col2 #newspaper-c .special-price {
-  position: relative;
-  &:after {
-    position: absolute;
-    content: "";
-    right: 36px;
-    top: 13px;
-    color:red;
-    border-top: 1px solid;
-    width:40px;
-    border-color: inherit;
-    border-width: 2px;
-    -webkit-transform:rotate(-35deg);
-    -moz-transform:rotate(-35deg);
-    -ms-transform:rotate(-35deg);
-    -o-transform:rotate(-35deg);
-    transform:rotate(-35deg);
-  }
-
-}
-
 @media (min-width: $small-screen-size) {
   #newspaper-c td {
     font-size:1.0em;

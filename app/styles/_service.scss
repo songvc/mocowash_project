@@ -1,5 +1,8 @@
 .service {
 	background-color: rgb(221, 225, 230);
+	background-image: url(../images/jumbo-picture.png);
+	background-position: center;
+	background-size: contain no-repeat;
 }
 
 .service-container {
@@ -11,7 +14,7 @@
   section {
     position:relative;
     text-align: center;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
     margin:5px;
     height:310px;
     flex: 1;
@@ -96,7 +99,7 @@
     section {
       flex: 1 0 48%;
       h2 {
-        font-size:1.28em;
+        font-size:1.0em;
       }
     }
   }
