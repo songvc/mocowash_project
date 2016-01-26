@@ -5,26 +5,26 @@
     div {
       flex:1;
       height:15vw;
-      max-height::150px;
+      max-height::180px;
     }
 
     .badge-1 {
       background-image: url("../images/yelp.png");
       background-repeat: no-repeat;
-      background-size: 80% auto;
+      background-size: 90%;
       background-position: center;
     }
     .badge-2 {
       background-image: url("../images/eco_voc_logo.jpeg");
       background-repeat: no-repeat;
-      background-size: 70% auto;
+      background-size: 80%;
       background-position: center;
     }
     .badge-3 {
       position:relative;
       background-image: url("../images/pacific2.png");
       background-repeat: no-repeat;
-      background-size: 80% auto;
+      background-size: 100%;
       background-position: center;
       a {
         position:absolute;
@@ -39,13 +39,13 @@
     .badge-4 {
       background-image: url("../images/bbb_logo.png");
       background-repeat: no-repeat;
-      background-size: 80% auto;
+      background-size: 90%;
       background-position: center;
     }
     .badge-5 {
       background-image: url("../images/eco-friendly.png");
       background-repeat: no-repeat;
-      background-size: 60% auto;
+      background-size: 70%;
       background-position: center;
     }
 }
