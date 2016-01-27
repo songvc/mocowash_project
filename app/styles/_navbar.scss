@@ -16,7 +16,8 @@
 		font-family: arial;
 		letter-spacing: -0.05em;
 		font-size: 1em;
-
+		text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+		
     &:hover,&:active {
       background: lighten(#2DDC27,30%);
     }

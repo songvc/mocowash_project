@@ -42,9 +42,11 @@
       height:50px;
       width:100%;
       color:white;
+			font-weight:bold;
 			font-family: arial;
 			text-transform: uppercase;
-      letter-spacing: -0.02em;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+      letter-spacing: 0.05em;
       font-size:1.0em;
       padding:15px 0px;
       background-color: $blue;
