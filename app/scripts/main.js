@@ -8,6 +8,15 @@ $(document).ready(function(){
 	var $toggle = $('.toggle');
 	var $modal = $('.modal');
 	var $servicebottom = $('.service-bottom');
+	//update these values if you change these breakpoints in the style.css file (or _layout.scss if you use SASS)
+	var MqM = 768;
+	var	MqL = 1024;
+	// var faqsSections = $('.cd-faq-group');
+	var	faqTrigger = $('.cd-faq-trigger');
+	var	faqsContainer = $('.cd-faq-items');
+	var	faqsCategoriesContainer = $('.cd-faq-categories');
+	var	faqsCategories = faqsCategoriesContainer.find('a');
+	var	closeFaqsContainer = $('.cd-close-panel');
 
 	// toggle nav menu
 	$toggle.on('click', function(e) {
@@ -19,8 +28,8 @@ $(document).ready(function(){
 		e.preventDefault();
 		$toggle.parent().removeClass('active');
 	});
-	// smooth scrolling
 
+	// smooth scrolling
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
       var target = $(this.hash);
@@ -83,16 +92,6 @@ $(document).ready(function(){
 
 	});
 
-	//update these values if you change these breakpoints in the style.css file (or _layout.scss if you use SASS)
-	var MqM = 768;
-	var	MqL = 1024;
-
-	// var faqsSections = $('.cd-faq-group');
-	var	faqTrigger = $('.cd-faq-trigger');
-	var	faqsContainer = $('.cd-faq-items');
-	var	faqsCategoriesContainer = $('.cd-faq-categories');
-	var	faqsCategories = faqsCategoriesContainer.find('a');
-	var	closeFaqsContainer = $('.cd-close-panel');
 	function closePanel(e) {
 		e.preventDefault();
 		faqsContainer.removeClass('slide-in').find('li').show();
@@ -226,5 +225,11 @@ $(document).ready(function(){
 	function checkVal(inputField) {
 		( inputField.val() == '' ) ? inputField.prev('.cd-label').removeClass('float') : inputField.prev('.cd-label').addClass('float');
 	}
+
+	//contact form
+
+	var from,to, subject, text;
+	$()
+
 
 });

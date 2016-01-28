@@ -34,7 +34,7 @@
 					<a href="#home" class="link">HOME</a>
 					<a href="#about" class="link">ABOUT</a>
 					<a href="#services" class="link">SERVICES</a>
-					<a href="#services" class="link">CONTACT</a>
+					<a href="#contact" class="link">CONTACT</a>
 					<a href="#faq" class="link">FAQ</a>
 		    </div>
 		  </nav>
@@ -334,10 +334,10 @@
 
 			<div id="contact">
 				<h1 class="page-title">contact</h1>
-				<form class="cd-form floating-labels">
+				<form class="cd-form floating-labels" action="http://formspree.io/songvc@gmail.com" method="POST">
 					<fieldset>
 						<div class="error-message">
-							<p>Please enter a valid email address</p>
+							<p>Please send us any concerns</p>
 						</div>
 
 						<div class="icon">
@@ -347,7 +347,7 @@
 
 				    <div class="icon">
 				    	<label class="cd-label" for="cd-company">Phone Number</label>
-							<input class="company" type="text" name="cd-company" id="cd-company">
+							<input class="company" type="text" name="cd-company" id="cd-company" required>
 				    </div>
 
 				    <div class="icon">
@@ -362,7 +362,10 @@
 	      			<textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
 						</div>
 						<div>
-			      	<input type="submit" value="Send Message">
+							<input type="text" name="_gotcha" style="display:none" />
+						</div>
+						<div>
+			      	<input type="submit" value="Send Message" onClick="sendEmail()">
 				    </div>
 					</fieldset>
 				</form>
@@ -459,7 +462,7 @@
 				</div>
 			</footer>
 
-			<div class="modal">
+			<!-- <div class="modal">
 				<div class="modal-container">
 					<div class="modal-header">
 						<h1>SIGN UP</h1>
@@ -488,17 +491,7 @@
 					</form>
 				</div>
 			</div>
-		</div>
-
-
-
-
-
-
-
-
-
-
+		</div> -->
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>

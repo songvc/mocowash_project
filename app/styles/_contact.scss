@@ -16,11 +16,8 @@
 
 	.cd-label {
 		font-size: 1.3rem;
-    color:red;
+    color:lighten(black,50%);
 		margin-bottom: 10px;
-	}
-
-	.cd-label {
 		display: block;
 	}
 
@@ -42,13 +39,13 @@
 	textarea {
 		/* general style for input elements */
 		padding: 12px;
-		border: 1px solid darken($color-3, 10%);
-		// background-color: $color-4;
+		border: 1px solid darken($color-3, 10%)!important;
 		border-radius: .25em;
+		padding: 16px!important;
 
 		&:focus {
 			outline: none;
-			border-color: red;
+			border-color: $blue!important;
 			box-shadow: 0 0 5px rgba($color-2, .2);
 		}
 	}
@@ -119,7 +116,7 @@
 		input[type="text"],
 		input[type="email"],
 		textarea {
-			padding: 16px;
+			padding: 16px!important;
 		}
 	}
 }
@@ -203,17 +200,20 @@ FLoating labels
 		left: 16px;
 		font-size: 1.6rem;
 		cursor: text;
-		@include transition(top .2s, left .2s, font-size .2s);
+		@include transition(top .15s, left .15s, font-size .15s);
 	}
 
 	.icon .cd-label {
+		position: absolute;
 		left: 56px;
+		top: 13px;
+		// left: 16px;
 	}
 
 	.cd-label.float {
 		/* move label out the input field */
 		font-size: 1.2rem;
-		top: -16px;
+		top: -26px;
 		left: 0 !important;
 	}
 
