@@ -27,6 +27,7 @@
 	}
 
 	input[type="text"],
+	input[type="tel"],
 	input[type="email"],
 	textarea {
 		display: block;
@@ -35,6 +36,7 @@
 	}
 
 	input[type="text"],
+	input[type="tel"],
 	input[type="email"],
 	textarea {
 		/* general style for input elements */
@@ -89,7 +91,7 @@
 	}
 
 	.error-message p {
-		background: $green;
+		background: gray;
 		color: white;
 		font-size: 1.4rem;
 		text-align: center;
@@ -99,7 +101,11 @@
 	}
 
 	.error {
-		border-color: white !important;
+		background: red !important;
+	}
+
+	.success {
+		background: $green !important;
 	}
 
 	@include MQ(M) {
@@ -114,6 +120,7 @@
 		}
 
 		input[type="text"],
+		input[type="tel"],
 		input[type="email"],
 		textarea {
 			padding: 16px!important;
@@ -142,20 +149,20 @@ Custom icons
 		padding-left: 54px !important;
 	}
 
-	.user {
+	.name {
 		background: url('../images/cd-icon-user.svg') no-repeat 16px center;
 	}
 
-	[required].user {
+	[required].name {
 		background: url('../images/cd-icon-user.svg') no-repeat 16px center,
 					url('../images/cd-required.svg') no-repeat top right;
 	}
 
-	.company {
+	.number {
 		background: url('../images/cd-icon-company.svg') no-repeat 16px center;
 	}
 
-	[required].company {
+	[required].number {
 		background: url('../images/cd-icon-company.svg') no-repeat 16px center,
 					url('../images/cd-required.svg') no-repeat top right;
 	}
@@ -200,7 +207,7 @@ FLoating labels
 		left: 16px;
 		font-size: 1.6rem;
 		cursor: text;
-		@include transition(top .15s, left .15s, font-size .15s);
+		@include transition(top .05s, left .05s, font-size .05s);
 	}
 
 	.icon .cd-label {
