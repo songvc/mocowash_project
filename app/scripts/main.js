@@ -233,36 +233,36 @@ $(document).ready(function(){
 
 	//AJAX form submission
 
-	$form.submit(function(e) {
-    e.preventDefault();
-
-		var formData = {
-			name: $('.name').val(),
-			number: $('.tel').val(),
-			email: $('.email').val(),
-			message: $('.message').val()
-		};
-
-
-		var formURL = $form.attr('action');
-		console.log(formURL);
-		console.log(formData);
-
-    $.ajax({
-			type: 'POST',
-			url: formURL,
-			data:	JSON.stringify(formData),
-			contentType:	'application/json'
-		}).done(function(data){
-			console.log('success:');
-			console.log(data);
-		}).fail(function(data){
-			console.log('error:' + data);
-		});
-
-
-
-	});
+	// $form.submit(function(e) {
+  //   e.preventDefault();
+	//
+	// 	var formData = {
+	// 		name: $('.name').val(),
+	// 		number: $('.tel').val(),
+	// 		email: $('.email').val(),
+	// 		message: $('.message').val()
+	// 	};
+	//
+	//
+	// 	var formURL = $form.attr('action');
+	// 	console.log(formURL);
+	// 	console.log(formData);
+	//
+  //   $.ajax({
+	// 		type: 'POST',
+	// 		url: formURL,
+	// 		data:	JSON.stringify(formData),
+	// 		contentType:	'application/json'
+	// 	}).done(function(data){
+	// 		console.log('success:');
+	// 		console.log(data);
+	// 	}).fail(function(data){
+	// 		console.log('error:' + data);
+	// 	});
+	//
+	//
+	//
+	// });
 
 
 });

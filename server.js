@@ -16,17 +16,17 @@ app.listen(port, function(){
 
 app.post('/contact', function(req,res) {
 	// console.log(req.headers);
-	// console.log(req.body);      // your JSON
-	// console.log(req.body.name);      // your JSON
-	// console.log(req.body.number);      // your JSON
-	// console.log(req.body.email);      // your JSON
-	// console.log(req.body.message);      // your JSON
+	// console.log(req.body);
+	// console.log(req.body.name);
+	// console.log(req.body.number);
+	// console.log(req.body.email);
+	// console.log(req.body.message);
 
 	var transporter = nodemailer.createTransport('smtps://songvc%40gmail.com:pass@smtp.gmail.com');
 
 	var mailOptions = {
 		from: req.body.name + '&lt;' + req.body.email + '&gt;',
-		to: 'songvc@gmail.com',
+		to: 'user@gmail.com',
 		subject: 'Webiste contact form',
 		text: req.body.message
 	}
