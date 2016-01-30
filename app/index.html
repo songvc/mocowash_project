@@ -334,7 +334,7 @@
 
 			<div id="contact">
 				<h1 class="page-title">contact</h1>
-				<form class="cd-form floating-labels" action="/contact" method="POST">
+				<form class="cd-form floating-labels" action="/contact">
 					<fieldset>
 						<div class="error-message">
 							<p>Please fill out required forms!</p>
@@ -347,7 +347,7 @@
 
 				    <div class="icon">
 				    	<label class="cd-label" for="cd-company">Phone Number</label>
-							<input class="number" type="tel" name="cd-company" id="cd-company" pattern="\b\d{3}[-.]?\d{3}[-.]?\d{4}\b" required>
+							<input class="tel" type="tel" name="cd-company" id="cd-company" pattern="\b\d{3}[-.]?\d{3}[-.]?\d{4}\b" required>
 				    </div>
 
 				    <div class="icon">
@@ -503,6 +503,7 @@
 		<!-- build:js scripts/vendor.js -->
 		<!-- bower:js -->
 		<script src="/bower_components/jquery/dist/jquery.js"></script>
+		<script src="/bower_components/spin.js/spin.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 

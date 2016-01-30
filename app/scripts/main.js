@@ -1,7 +1,6 @@
 'use strict';
 
 $(document).ready(function(){
-	console.log('document ready');
 
 	var $window = $(window);
 	var $body = $('body');
@@ -233,54 +232,32 @@ $(document).ready(function(){
 	}
 
 	//AJAX form submission
+
 	$form.submit(function(e) {
     e.preventDefault();
 
 		var formData = {
-			'name': $('.user').val(),
-			'number': $('.number').val(),
-			'email': $('.email').val()
+			name: $('.name').val(),
+			number: $('.tel').val(),
+			email: $('.email').val(),
+			message: $('.message').val()
 		};
 
+
+		var formURL = $form.attr('action');
+		console.log(formURL);
 		console.log(formData);
-		var formURL = $(this).attr("action");
 
     $.ajax({
 			type: 'POST',
 			url: formURL,
-			data:	formData,
-			dataType:	'json',
-			encode: true
-
+			data:	JSON.stringify(formData),
+			contentType:	'application/json'
 		}).done(function(data){
+			console.log('success:');
 			console.log(data);
-			if(!data.success) {
-
-				//handle error for name
-				if (data.errors.name) {
-					$('.error-message').addClass('.error');
-					$('.error-message p').innerHTML(data.errors.name);
-				}
-				//handle error for number
-				if (data.errors.number) {
-					$('.error-message').addClass('.error');
-					$('.error-message p').innerHTML(data.errors.number);
-				}
-				//handle error for email
-				if (data.errors.email) {
-					$('.error-message').addClass('.error');
-					$('.error-message p').innerHTML(data.errors.email);
-				}
-			}
-
-			else {
-				$('.error-message').addClass('.success');
-				$('.error-message p').innterHTML('Submitted your form successfully!');
-				alert('form submitted successfully');
-			}
 		}).fail(function(data){
-			console.log(data);
-			alert('server-side errors');
+			console.log('error:' + data);
 		});
 
 

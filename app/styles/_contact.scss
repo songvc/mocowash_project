@@ -158,11 +158,11 @@ Custom icons
 					url('../images/cd-required.svg') no-repeat top right;
 	}
 
-	.number {
+	.tel {
 		background: url('../images/cd-icon-company.svg') no-repeat 16px center;
 	}
 
-	[required].number {
+	[required].tel {
 		background: url('../images/cd-icon-company.svg') no-repeat 16px center,
 					url('../images/cd-required.svg') no-repeat top right;
 	}

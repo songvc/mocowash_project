@@ -15,34 +15,34 @@ app.listen(port, function(){
 });
 
 app.post('/contact', function(req,res) {
-	console.log(req);
-	console.log(req.body);
-	// var mailOpts, smtpTrans;
-	//
-	// smtpTrans = nodemailer.createTransport('SMTP', {
-	// 	service: 'Gmail',
-	// 	auth: {
-	// 		user: 'songvc@gmail.com',
-	// 		pass: 'application-specific-password'
-	// 	}
-	// });
-	//
-	// mailOpts = {
-	// 	from: req.body.user + '&lt;' + req.body.email + '&gt;',
-	// 	to: 'songvc@gmail.com',
-	// 	subject: 'Webiste contact form',
-	// 	text: req.body.message
-	// }
-	//
-	// smtpTrans.sendMail(mailOpts, function(err, res) {
-	// 	//Email not sent
-	// 	if (error) {
-	// 		res.render('contact', { title: 'Raging Flame Laboratory - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contact' })
-	// 	}
-	// 	//Yay!! Email sent
-	// 	else {
-	// 		res.render('contact', { title: 'Raging Flame Laboratory - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contact' })
-	// 	}
-	// })
+	// console.log(req.headers);
+	// console.log(req.body);      // your JSON
+	// console.log(req.body.name);      // your JSON
+	// console.log(req.body.number);      // your JSON
+	// console.log(req.body.email);      // your JSON
+	// console.log(req.body.message);      // your JSON
+
+	var transporter = nodemailer.createTransport('smtps://songvc%40gmail.com:pass@smtp.gmail.com');
+
+	var mailOptions = {
+		from: req.body.name + '&lt;' + req.body.email + '&gt;',
+		to: 'songvc@gmail.com',
+		subject: 'Webiste contact form',
+		text: req.body.message
+	}
+
+	transporter.sendMail(mailOptions, function(err, res) {
+		//Email not sent
+		if (err) {
+			console.log(err);
+			console.log('error!');
+		}
+		//Yay!! Email sent
+		else {
+			console.log('email sent!!');
+		}
+	})
+
+	// res.send(req.body);    // echo the result back
 
 })
