@@ -2,12 +2,12 @@
 
 $(document).ready(function(){
 
-	var $window = $(window);
+	var nav = document.querySelector('nav');
+	var links = document.getElementsByClassName('link');
+	var navlist = document.getElementById('navlist');
+	var toggle = document.querySelector('.toggle');
 	var $body = $('body');
 	var $form = $('form');
-	var $nav = $('nav');
-	var $link = $('nav .link');
-	var $toggle = $('.toggle');
 	var $modal = $('.modal');
 	var $servicebottom = $('.service-bottom');
 	//update these values if you change these breakpoints in the style.css file (or _layout.scss if you use SASS)
@@ -20,17 +20,50 @@ $(document).ready(function(){
 	var	faqsCategories = faqsCategoriesContainer.find('a');
 	var	closeFaqsContainer = $('.cd-close-panel');
 
+	// toggle helper function
+	var toggleState = function (elem, one, two) {
+			var elem = document.querySelector(elem);
+			elem.setAttribute('data-state', elem.getAttribute('data-state') === one ? two: one);
+	}
+
+	// Stop window from bounnce in mobile safari
+	document.body.addEventListener('touchmove', function(e) {
+	 e.preventDefault();
+	});
+
 	// toggle nav menu
-	$toggle.on('click', function(e) {
+	toggle.addEventListener('click', function(e) {
+		e.stopImmediatePropagation();
 		e.preventDefault();
-		$toggle.parent().toggleClass('active');
+		toggle.parentNode.classList.toggle('is-open');
 	});
 
 	// close nav if link is clicked
-	$link.on('click', function(e) {
-		e.preventDefault();
-		$toggle.parent().removeClass('active');
+	navlist.addEventListener('click', function(e) {
+		console.log("navlist clicked");
+		console.log(e.target);
+		console.log(e.target.nodeName);
+		if (e.target && e.target.nodeName === 'A') {
+			console.log("target identified");
+			navlist.parentNode.remove('is-expanded');
+		}
 	});
+
+	// fixed navbar animation
+	window.addEventListener('scroll', function(){
+		if (window.scrollY > 10){
+			nav.classList.add('is-scrolled');
+			for (var i = 0; i < links.length;i++){
+				links[i].style.color = "black";
+			}
+		} else {
+			nav.classList.remove('is-scrolled');
+			for (var i = 0; i < links.length;i++){
+				links[i].style.color = "white";
+			}
+		}
+	})
+
 
 	// smooth scrolling
   $('a[href*=#]:not([href=#])').click(function() {
@@ -46,21 +79,6 @@ $(document).ready(function(){
     }
   });
 
-	// wiring buttons with modal
-	$('.btn').click(function(e){
-		e.preventDefault();
-		if ($modal.is(':visible')){
-			$modal.hide();
-		}else {
-			$modal.show();
-		}
-	});
-
-	$('.close').click(function(e){
-		e.preventDefault();
-		$modal.hide();
-	});
-
 	// toggle for service & show price
 	$servicebottom.click(function(e){
 		var $servicebox = $(this).siblings('.service-box');
@@ -68,32 +86,6 @@ $(document).ready(function(){
 		$servicebox.fadeToggle();
 	});
 
-	// fixed navbar animation
-	$window.scroll(function(){
-
-		if ($window.scrollTop() > 10){
-			$nav.css({
-				'background-color': 'white',
-				'box-shadow': '0 .125rem .25rem rgba(51,61,71,.4)',
-				'background-image': 'none'
-			});
-			$link.css({
-				'color': 'black'
-			});
-
-		} else {
-			$nav.css({
-				'background-color': 'transparent',
-				'box-shadow': 'none',
-				'background-image': 'linear-gradient(to bottom,rgba(25,25,25,0.95),transparent)'
-			});
-
-			$link.css({
-				'color': 'white'
-			});
-		}
-
-	});
 
 	function closePanel(e) {
 		e.preventDefault();
@@ -107,7 +99,7 @@ $(document).ready(function(){
 		var	height = $('.cd-faq').height() - $('.cd-faq-categories').height();
 		var	margin = 20;
 
-		if( top - margin <= $window.scrollTop() && top - margin + height > $window.scrollTop() ) {
+		if( top - margin <= window.scrollTop() && top - margin + height > window.scrollTop() ) {
 			var leftValue = faqsCategoriesContainer.offset().left;
 			// var	widthValue = faqsCategoriesContainer.width();
 			faqsCategoriesContainer.addClass('is-fixed').css({
@@ -119,8 +111,8 @@ $(document).ready(function(){
 				'-o-transform': 'translateZ(0)',
 				'transform': 'translateZ(0)'
 			});
-		} else if( top - margin + height <= $window.scrollTop()) {
-			var delta = top - margin + height - $window.scrollTop();
+		} else if( top - margin + height <= window.scrollTop()) {
+			var delta = top - margin + height - window.scrollTop();
 			faqsCategoriesContainer.css({
 				'-moz-transform': 'translateZ(0) translateY(' + delta + 'px)',
 					'-webkit-transform': 'translateZ(0) translateY(' + delta + 'px)',
@@ -143,7 +135,7 @@ $(document).ready(function(){
 			var	activeCategory = $('.cd-faq-categories a[href="#' + actual.attr('id') + '"]');
 			var	topSection = (activeCategory.parent('li').is(':first-child')) ? 0 : Math.round(actual.offset().top);
 
-			if ( ( topSection - 20 <= $window.scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + margin - 20 > $window.scrollTop() ) ) {
+			if ( ( topSection - 20 <= window.scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + margin - 20 > window.scrollTop() ) ) {
 				activeCategory.addClass('selected');
 			}else {
 				activeCategory.removeClass('selected');
@@ -161,7 +153,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		var selectedHref = $(this).attr('href');
 		var target = $(selectedHref);
-		if( $window.width() < MqM) {
+		if( window.width() < MqM) {
 			faqsContainer.scrollTop(0).addClass('slide-in').children('ul').removeClass('selected').end().children(selectedHref).addClass('selected');
 			closeFaqsContainer.addClass('move-left');
 			$body.addClass('cd-overlay');
@@ -187,27 +179,27 @@ $(document).ready(function(){
 	});
 
 	//update category sidebar while scrolling
-	$window.on('scroll', function(){
-		if ( $window.width() > MqL ) {
-			(!window.requestAnimationFrame) ? updateCategory() : window.requestAnimationFrame(updateCategory);
-		}
+	window.addEventListener('scroll', function(){
+		// if ( window.width() > MqL ) {
+		// 	(!window.requestAnimationFrame) ? updateCategory() : window.requestAnimationFrame(updateCategory);
+		// }
 	});
 
-	$window.on('resize', function(){
-		if($window.width() <= MqL) {
-			faqsCategoriesContainer.removeClass('is-fixed').css({
-				'-moz-transform': 'translateY(0)',
-					'-webkit-transform': 'translateY(0)',
-				'-ms-transform': 'translateY(0)',
-				'-o-transform': 'translateY(0)',
-				'transform': 'translateY(0)'
-			});
-		}
-		if( faqsCategoriesContainer.hasClass('is-fixed') ) {
-			faqsCategoriesContainer.css({
-				'left': faqsContainer.offset().left
-			});
-		}
+	window.addEventListener('resize', function(){
+		// if(window.width() <= MqL) {
+		// 	faqsCategoriesContainer.removeClass('is-fixed').css({
+		// 		'-moz-transform': 'translateY(0)',
+		// 			'-webkit-transform': 'translateY(0)',
+		// 		'-ms-transform': 'translateY(0)',
+		// 		'-o-transform': 'translateY(0)',
+		// 		'transform': 'translateY(0)'
+		// 	});
+		// }
+		// if( faqsCategoriesContainer.hasClass('is-fixed') ) {
+		// 	faqsCategoriesContainer.css({
+		// 		'left': faqsContainer.offset().left
+		// 	});
+		// }
 	});
 
 	//contact form

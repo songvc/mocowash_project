@@ -1,3 +1,15 @@
+nav {
+	background-color: transparent;
+	box-shadow: none;
+	background-image: linear-gradient(to bottom,rgba(25,25,25,0.95),transparent);
+}
+
+nav.is-scrolled {
+	background-color: white;
+	box-shadow: 0 .125rem .25rem rgba(51,61,71,.4);
+	background-image: none;
+}
+
 .navbar {
 	position:fixed;
 	z-index:5;
@@ -17,7 +29,6 @@
 		letter-spacing: -0.05em;
 		font-size: 1em;
 		text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-		
     &:hover,&:active {
       background: lighten(#2DDC27,30%);
     }
@@ -84,7 +95,7 @@
 }
 
 @media (max-width: 47em) {
-	.navbar.active {
+		.navbar.is-open {
 	  .toggle {
 			background-color: white;
 			transition: background-color 0.7s;
@@ -92,6 +103,7 @@
 	  div {
 			background-color: white;
 			max-height:400px;
+			box-shadow: 0 .125rem .25rem rgba(51,61,71,.4);
 	  }
 		.link {
 			color:black!important;
