@@ -6,13 +6,11 @@ $(document).ready(function(){
 	var links = document.getElementsByClassName('link');
 	var navlist = document.getElementById('navlist');
 	var toggle = document.querySelector('.toggle');
-	var $body = $('body');
-	var $form = $('form');
-	var $modal = $('.modal');
-	var $servicebottom = $('.service-bottom');
+	var serviceButton = document.getElementsByClassName('service-bottom');
 	//update these values if you change these breakpoints in the style.css file (or _layout.scss if you use SASS)
 	var MqM = 768;
 	var	MqL = 1024;
+	var $body = $('body');
 	var faqsSections = $('.cd-faq-group');
 	var	faqTrigger = $('.cd-faq-trigger');
 	var	faqsContainer = $('.cd-faq-items');
@@ -20,71 +18,57 @@ $(document).ready(function(){
 	var	faqsCategories = faqsCategoriesContainer.find('a');
 	var	closeFaqsContainer = $('.cd-close-panel');
 
-	// toggle helper function
-	var toggleState = function (elem, one, two) {
-			var elem = document.querySelector(elem);
-			elem.setAttribute('data-state', elem.getAttribute('data-state') === one ? two: one);
-	}
-
 	// Stop window from bounnce in mobile safari
 	document.body.addEventListener('touchmove', function(e) {
-	 e.preventDefault();
-	});
-
-	// toggle nav menu
-	toggle.addEventListener('click', function(e) {
-		e.stopImmediatePropagation();
 		e.preventDefault();
-		toggle.parentNode.classList.toggle('is-open');
-	});
-
-	// close nav if link is clicked
-	navlist.addEventListener('click', function(e) {
-		console.log("navlist clicked");
-		console.log(e.target);
-		console.log(e.target.nodeName);
-		if (e.target && e.target.nodeName === 'A') {
-			console.log("target identified");
-			navlist.parentNode.remove('is-expanded');
-		}
 	});
 
 	// fixed navbar animation
-	window.addEventListener('scroll', function(){
+
+	function scrollHandler() {
 		if (window.scrollY > 10){
 			nav.classList.add('is-scrolled');
-			for (var i = 0; i < links.length;i++){
-				links[i].style.color = "black";
-			}
 		} else {
 			nav.classList.remove('is-scrolled');
-			for (var i = 0; i < links.length;i++){
-				links[i].style.color = "white";
-			}
 		}
-	})
+	}
+	window.addEventListener('scroll', scrollHandler)
 
+	// toggle nav menu
+	function toggleHandler(e){
+		e.stopImmediatePropagation();
+		e.preventDefault();
+		toggle.parentNode.classList.toggle('is-open');
+		if (!nav.classList.contains('is-scrolled')){
+			nav.classList.add('is-scrolled');
+		}
+	}
+	toggle.addEventListener('click', toggleHandler);
 
-	// smooth scrolling
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 500);
-        return false;
-      }
-    }
-  });
+	// close nav if link is clicked
+	// adding event handlers for parentnode for event delegation
+	function navlistHandler(e) {
+		if (e.target && e.target.nodeName === 'A') {
+			navlist.parentNode.classList.remove('is-open');
+		}
+	}
+	navlist.addEventListener('click', navlistHandler);
 
 	// toggle for service & show price
-	$servicebottom.click(function(e){
-		var $servicebox = $(this).siblings('.service-box');
-		e.preventDefault();
-		$servicebox.fadeToggle();
-	});
+	function serviceHandler() {
+		console.log(this);
+		var serviceBox = this.previousSibling;
+		console.log(serviceBox);
+	}
+
+	for (var i = 0; i < serviceButton.length; i++) {
+		serviceButton[i].addEventListener('click', serviceHandler);
+	}
+	// $servicebottom.click(function(e){
+	// 	var $servicebox = $(this).siblings('.service-box');
+	// 	e.preventDefault();
+	// 	$servicebox.fadeToggle();
+	// });
 
 
 	function closePanel(e) {

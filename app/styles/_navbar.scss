@@ -8,6 +8,9 @@ nav.is-scrolled {
 	background-color: white;
 	box-shadow: 0 .125rem .25rem rgba(51,61,71,.4);
 	background-image: none;
+	.link {
+		color:black;
+	}
 }
 
 .navbar {
@@ -20,6 +23,7 @@ nav.is-scrolled {
   }
 
   .link {
+		color:white;
     display: block;
     width: 100%;
     text-align: center;
@@ -96,12 +100,7 @@ nav.is-scrolled {
 
 @media (max-width: 47em) {
 		.navbar.is-open {
-	  .toggle {
-			background-color: white;
-			transition: background-color 0.7s;
-	  }
 	  div {
-			background-color: white;
 			max-height:400px;
 			box-shadow: 0 .125rem .25rem rgba(51,61,71,.4);
 	  }
