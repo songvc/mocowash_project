@@ -18,9 +18,9 @@ $(document).ready(function(){
 	var closePanelButton = document.querySelector('.cd-close-panel');
 
 	// Stop window from bounnce in mobile safari
-	document.body.addEventListener('touchmove', function(e) {
-		e.preventDefault();
-	});
+	// document.body.addEventListener('touchmove', function(e) {
+	// 	e.preventDefault();
+	// });
 
 	// fixed navbar animation
 	function scrollHandler() {
@@ -51,7 +51,6 @@ $(document).ready(function(){
 		}
 	}
 	navlist.addEventListener('click', navlistHandler);
-
 
 	// toggle for service & show price
 	serviceButtons.forEach(function(button){
@@ -188,4 +187,4 @@ $(document).ready(function(){
 	}
 	window.addEventListener('resize', resizeHandler);
 
-})
+});
