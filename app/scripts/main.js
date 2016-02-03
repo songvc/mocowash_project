@@ -6,12 +6,14 @@ $(document).ready(function(){
 	var links = document.getElementsByClassName('link');
 	var navlist = document.getElementById('navlist');
 	var toggle = document.querySelector('.toggle');
-	var serviceButton = Array.prototype.slice.call(document.querySelectorAll('.service-bottom')); //convert nodelist to arrays
+	var serviceButtons = Array.prototype.slice.call(document.querySelectorAll('.service-bottom')); //convert nodelist to arrays
 	var MqM = 768;
 	var	MqL = 1024;
 	var $body = $('body');
+	var $window = $('window');
 	var faqsSections = $('.cd-faq-group');
-	var	faqTrigger = $('.cd-faq-trigger');
+	// var	faqTrigger = $('.cd-faq-trigger');
+	var faqTriggers = Array.prototype.slice.call(document.querySelectorAll('.cd-faq-trigger'));
 	var	faqsContainer = $('.cd-faq-items');
 	var	faqsCategoriesContainer = $('.cd-faq-categories');
 	var	faqsCategories = faqsCategoriesContainer.find('a');
@@ -54,17 +56,17 @@ $(document).ready(function(){
 
 
 	// toggle for service & show price
-	serviceButton.forEach(function(button){
+	serviceButtons.forEach(function(button){
 		button.addEventListener('click', function(e){
 			var servicebox = this.previousElementSibling.previousElementSibling;
-
 			if (servicebox.classList.contains('is-faded')) {
 				servicebox.classList.remove('is-faded');
-			}else {
+			} else {
 				servicebox.classList.add('is-faded');
 			}
 		})
 	})
+
 
 	function closePanel(e) {
 		e.preventDefault();
@@ -73,66 +75,66 @@ $(document).ready(function(){
 		$('body').removeClass('cd-overlay');
 	}
 
-	function updateCategoryPosition() {
-		var top = $('.cd-faq').offset().top;
-		var	height = $('.cd-faq').height() - $('.cd-faq-categories').height();
-		var	margin = 20;
-
-		if( top - margin <= window.scrollTop() && top - margin + height > window.scrollTop() ) {
-			var leftValue = faqsCategoriesContainer.offset().left;
-			// var	widthValue = faqsCategoriesContainer.width();
-			faqsCategoriesContainer.addClass('is-fixed').css({
-				'left': leftValue,
-				'top': margin,
-				'-moz-transform': 'translateZ(0)',
-					'-webkit-transform': 'translateZ(0)',
-				'-ms-transform': 'translateZ(0)',
-				'-o-transform': 'translateZ(0)',
-				'transform': 'translateZ(0)'
-			});
-		} else if( top - margin + height <= window.scrollTop()) {
-			var delta = top - margin + height - window.scrollTop();
-			faqsCategoriesContainer.css({
-				'-moz-transform': 'translateZ(0) translateY(' + delta + 'px)',
-					'-webkit-transform': 'translateZ(0) translateY(' + delta + 'px)',
-				'-ms-transform': 'translateZ(0) translateY(' + delta + 'px)',
-				'-o-transform': 'translateZ(0) translateY(' + delta + 'px)',
-				'transform': 'translateZ(0) translateY(' + delta + 'px)'
-			});
-		} else {
-			faqsCategoriesContainer.removeClass('is-fixed').css({
-				'left': 0,
-				'top': 0
-			});
-		}
-	}
-
-	function updateSelectedCategory() {
-		faqsSections.each(function(){
-			var actual = $(this);
-			var	margin = parseInt($('.cd-faq-title').eq(1).css('marginTop').replace('px', ''));
-			var	activeCategory = $('.cd-faq-categories a[href="#' + actual.attr('id') + '"]');
-			var	topSection = (activeCategory.parent('li').is(':first-child')) ? 0 : Math.round(actual.offset().top);
-
-			if ( ( topSection - 20 <= window.scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + margin - 20 > window.scrollTop() ) ) {
-				activeCategory.addClass('selected');
-			}else {
-				activeCategory.removeClass('selected');
-			}
-		});
-	}
-
-	function updateCategory(){
-		updateCategoryPosition();
-		updateSelectedCategory();
-	}
+	// function updateCategoryPosition() {
+	// 	var top = $('.cd-faq').offset().top;
+	// 	var	height = $('.cd-faq').height() - $('.cd-faq-categories').height();
+	// 	var	margin = 20;
+	//
+	// 	if( top - margin <= $window.scrollTop() && top - margin + height > $window.scrollTop() ) {
+	// 		var leftValue = faqsCategoriesContainer.offset().left;
+	// 		// var	widthValue = faqsCategoriesContainer.innerWidth;
+	// 		faqsCategoriesContainer.addClass('is-fixed').css({
+	// 			'left': leftValue,
+	// 			'top': margin,
+	// 			'-moz-transform': 'translateZ(0)',
+	// 				'-webkit-transform': 'translateZ(0)',
+	// 			'-ms-transform': 'translateZ(0)',
+	// 			'-o-transform': 'translateZ(0)',
+	// 			'transform': 'translateZ(0)'
+	// 		});
+	// 	} else if( top - margin + height <= $window.scrollTop()) {
+	// 		var delta = top - margin + height - $window.scrollTop();
+	// 		faqsCategoriesContainer.css({
+	// 			'-moz-transform': 'translateZ(0) translateY(' + delta + 'px)',
+	// 				'-webkit-transform': 'translateZ(0) translateY(' + delta + 'px)',
+	// 			'-ms-transform': 'translateZ(0) translateY(' + delta + 'px)',
+	// 			'-o-transform': 'translateZ(0) translateY(' + delta + 'px)',
+	// 			'transform': 'translateZ(0) translateY(' + delta + 'px)'
+	// 		});
+	// 	} else {
+	// 		faqsCategoriesContainer.removeClass('is-fixed').css({
+	// 			'left': 0,
+	// 			'top': 0
+	// 		});
+	// 	}
+	// }
+	//
+	// function updateSelectedCategory() {
+	// 	faqsSections.each(function(){
+	// 		var actual = $(this);
+	// 		var	margin = parseInt($('.cd-faq-title').eq(1).css('marginTop').replace('px', ''));
+	// 		var	activeCategory = $('.cd-faq-categories a[href="#' + actual.attr('id') + '"]');
+	// 		var	topSection = (activeCategory.parent('li').is(':first-child')) ? 0 : Math.round(actual.offset().top);
+	//
+	// 		if ( ( topSection - 20 <= $window.scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + margin - 20 > $window.scrollTop() ) ) {
+	// 			activeCategory.addClass('selected');
+	// 		}else {
+	// 			activeCategory.removeClass('selected');
+	// 		}
+	// 	});
+	// }
+	//
+	// function updateCategory(){
+	// 	updateCategoryPosition();
+	// 	updateSelectedCategory();
+	// }
 
 	//select a faq section
 	faqsCategories.on('click', function(event){
 		event.preventDefault();
 		var selectedHref = $(this).attr('href');
 		var target = $(selectedHref);
-		if( window.width() < MqM) {
+		if( window.innerWidth < MqM) {
 			faqsContainer.scrollTop(0).addClass('slide-in').children('ul').removeClass('selected').end().children(selectedHref).addClass('selected');
 			closeFaqsContainer.addClass('move-left');
 			$body.addClass('cd-overlay');
@@ -152,54 +154,35 @@ $(document).ready(function(){
 	});
 
 	//show faq content clicking on faqTrigger
-	faqTrigger.on('click', function(event){
-		event.preventDefault();
-		$(this).next('.cd-faq-content').slideToggle(200).end().parent('li').toggleClass('content-visible');
-	});
+	faqTriggers.forEach(function(trigger){
+		trigger.addEventListener('click', function(event) {
+			var content = this.nextElementSibling;
+			var arrow = content.parentElement;
+			$(this).next('.cd-faq-content').slideToggle(200);
 
-	//update category sidebar while scrolling
-	window.addEventListener('scroll', function(){
-		// if ( window.width() > MqL ) {
-		// 	(!window.requestAnimationFrame) ? updateCategory() : window.requestAnimationFrame(updateCategory);
-		// }
-	});
+			if (arrow.classList.contains('content-visible')) {
+				arrow.classList.remove('content-visible');
+			} else {
+				arrow.classList.add('content-visible');
+			}
+		})
+	})
 
 	window.addEventListener('resize', function(){
-		// if(window.width() <= MqL) {
-		// 	faqsCategoriesContainer.removeClass('is-fixed').css({
-		// 		'-moz-transform': 'translateY(0)',
-		// 			'-webkit-transform': 'translateY(0)',
-		// 		'-ms-transform': 'translateY(0)',
-		// 		'-o-transform': 'translateY(0)',
-		// 		'transform': 'translateY(0)'
-		// 	});
-		// }
-		// if( faqsCategoriesContainer.hasClass('is-fixed') ) {
-		// 	faqsCategoriesContainer.css({
-		// 		'left': faqsContainer.offset().left
-		// 	});
-		// }
-	});
-
-	//contact form
-	function checkVal(inputField) {
-		( inputField.val() === '' ) ? inputField.prev('.cd-label').removeClass('float') : inputField.prev('.cd-label').addClass('float');
-	}
-
-	function floatLabels() {
-		var inputFields = $('.floating-labels .cd-label').next();
-		inputFields.each(function(){
-			var singleInput = $(this);
-			//check if user is filling one of the form fields
-			checkVal(singleInput);
-			singleInput.on('change keyup', function(){
-				checkVal(singleInput);
+		if(window.innerWidth <= MqL) {
+			faqsCategoriesContainer.removeClass('is-fixed').css({
+				'-moz-transform': 'translateY(0)',
+					'-webkit-transform': 'translateY(0)',
+				'-ms-transform': 'translateY(0)',
+				'-o-transform': 'translateY(0)',
+				'transform': 'translateY(0)'
 			});
-		});
-	}
-
-	if( $('.floating-labels').length > 0 ) {
-		floatLabels();
-	}
+		}
+		if( faqsCategoriesContainer.hasClass('is-fixed') ) {
+			faqsCategoriesContainer.css({
+				'left': faqsContainer.offset().left
+			});
+		}
+	});
 
 });

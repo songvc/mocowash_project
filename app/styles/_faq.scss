@@ -391,10 +391,10 @@ Main components
 		color: $color-4;
 	}
 
+
 	@include MQ(M) {
 		display: none;
-		padding: 0 24px 30px;
-
+    padding: 0 24px 30px;
 		p {
 			line-height: 1.6
 		}

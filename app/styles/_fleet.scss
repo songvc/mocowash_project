@@ -12,7 +12,7 @@
     padding:10px;
     text-align: center;
     margin:5px;
-    height:310px;
+    // height:310px;
     flex: 1;
     background-color:#57B846;
     h3 {
@@ -21,9 +21,26 @@
       letter-spacing: 0.02em;
       text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
     }
-    h5 {
+    h4 {
       color:white;
     }
+
+    div[class^="fleet"] {
+      margin:10px 0px;
+      height:200px;
+      background-repeat: no-repeat;
+      max-width:100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .fleet-image {
+      background-image: url("../images/fleet-picture-1.png");
+    }
+    .fleet-image2 {
+      background-image: url("../images/fleet-picture-2.png");
+    }
+
   }
 }
 

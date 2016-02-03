@@ -43,6 +43,7 @@
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.4",
+    "modernizr": "^3.3.1",
     "nodemailer": "^2.0.0",
     "normalize-scss": "^4.0.3"
   }
