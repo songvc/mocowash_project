@@ -10,14 +10,12 @@ $(document).ready(function(){
 	var MqM = 768;
 	var	MqL = 1024;
 	var $body = $('body');
-	var $window = $('window');
-	var faqsSections = $('.cd-faq-group');
-	// var	faqTrigger = $('.cd-faq-trigger');
+	var body = document.querySelector('body');
 	var faqTriggers = Array.prototype.slice.call(document.querySelectorAll('.cd-faq-trigger'));
 	var	faqsContainer = $('.cd-faq-items');
 	var	faqsCategoriesContainer = $('.cd-faq-categories');
 	var	faqsCategories = faqsCategoriesContainer.find('a');
-	var	closeFaqsContainer = $('.cd-close-panel');
+	var closePanelButton = document.querySelector('.cd-close-panel');
 
 	// Stop window from bounnce in mobile safari
 	document.body.addEventListener('touchmove', function(e) {
@@ -32,7 +30,7 @@ $(document).ready(function(){
 			nav.classList.remove('is-scrolled');
 		}
 	}
-	window.addEventListener('scroll', scrollHandler)
+	window.addEventListener('scroll', scrollHandler);
 
 	// toggle nav menu
 	function toggleHandler(e){
@@ -64,16 +62,9 @@ $(document).ready(function(){
 			} else {
 				servicebox.classList.add('is-faded');
 			}
-		})
-	})
+		});
+	});
 
-
-	function closePanel(e) {
-		e.preventDefault();
-		faqsContainer.removeClass('slide-in').find('li').show();
-		closeFaqsContainer.removeClass('move-left');
-		$('body').removeClass('cd-overlay');
-	}
 
 	// function updateCategoryPosition() {
 	// 	var top = $('.cd-faq').offset().top;
@@ -136,19 +127,27 @@ $(document).ready(function(){
 		var target = $(selectedHref);
 		if( window.innerWidth < MqM) {
 			faqsContainer.scrollTop(0).addClass('slide-in').children('ul').removeClass('selected').end().children(selectedHref).addClass('selected');
-			closeFaqsContainer.addClass('move-left');
-			$body.addClass('cd-overlay');
+			closePanelButton.classList.add('move-left');
+			body.classList.add('cd-overlay');
 		} else {
-					$('body,html').animate({ 'scrollTop': target.offset().top - 19}, 200);
+			$('body,html').animate({ 'scrollTop': target.offset().top - 19}, 200);
 		}
 	});
 
 	//close faq lateral panel - mobile only
+	function closePanel(e) {
+		e.preventDefault();
+		faqsContainer.removeClass('slide-in');
+		closePanelButton.classList.remove('move-left');
+		body.classList.remove('cd-overlay');
+	}
+
 	$body.bind('click touchstart', function(event){
 		if( $(event.target).is('body.cd-overlay') || $(event.target).is('.cd-close-panel')) {
 			closePanel(event);
 		}
 	});
+
 	faqsContainer.on('swiperight', function(event){
 		closePanel(event);
 	});
@@ -165,10 +164,11 @@ $(document).ready(function(){
 			} else {
 				arrow.classList.add('content-visible');
 			}
-		})
-	})
+		});
+	});
 
-	window.addEventListener('resize', function(){
+	function resizeHandler() {
+
 		if(window.innerWidth <= MqL) {
 			faqsCategoriesContainer.removeClass('is-fixed').css({
 				'-moz-transform': 'translateY(0)',
@@ -178,11 +178,14 @@ $(document).ready(function(){
 				'transform': 'translateY(0)'
 			});
 		}
+
 		if( faqsCategoriesContainer.hasClass('is-fixed') ) {
 			faqsCategoriesContainer.css({
 				'left': faqsContainer.offset().left
 			});
 		}
-	});
 
-});
+	}
+	window.addEventListener('resize', resizeHandler);
+
+})
