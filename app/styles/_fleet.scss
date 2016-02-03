@@ -1,0 +1,49 @@
+.fleet-container {
+  display:flex;
+  flex-flow: column wrap;
+  padding:5px;
+  justify-content: space-between;
+
+  section {
+    position:relative;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 0em .25em .25em 0em;
+    position:relative;
+    padding:10px;
+    text-align: center;
+    margin:5px;
+    height:310px;
+    flex: 1;
+    background-color:#57B846;
+    h3 {
+      color:white;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    }
+    h5 {
+      color:white;
+    }
+  }
+}
+
+@media (min-width: $small-screen-size) {
+  .fleet-container {
+    flex-flow: row wrap;
+    section {
+      flex: 1 0 48%;
+    }
+  }
+}
+
+@media (min-width: $medium-screen-size) {
+  .fleet-container {
+    section {
+      flex: 1 0 32%;
+    }
+  }
+}
+
+@media (min-width: $large-screen-size) {
+
+}

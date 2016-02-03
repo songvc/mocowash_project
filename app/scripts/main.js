@@ -6,8 +6,7 @@ $(document).ready(function(){
 	var links = document.getElementsByClassName('link');
 	var navlist = document.getElementById('navlist');
 	var toggle = document.querySelector('.toggle');
-	var serviceButton = document.getElementsByClassName('service-bottom');
-	//update these values if you change these breakpoints in the style.css file (or _layout.scss if you use SASS)
+	var serviceButton = Array.prototype.slice.call(document.querySelectorAll('.service-bottom')); //convert nodelist to arrays
 	var MqM = 768;
 	var	MqL = 1024;
 	var $body = $('body');
@@ -24,7 +23,6 @@ $(document).ready(function(){
 	});
 
 	// fixed navbar animation
-
 	function scrollHandler() {
 		if (window.scrollY > 10){
 			nav.classList.add('is-scrolled');
@@ -54,22 +52,19 @@ $(document).ready(function(){
 	}
 	navlist.addEventListener('click', navlistHandler);
 
+
 	// toggle for service & show price
-	function serviceHandler() {
-		console.log(this);
-		var serviceBox = this.previousSibling;
-		console.log(serviceBox);
-	}
+	serviceButton.forEach(function(button){
+		button.addEventListener('click', function(e){
+			var servicebox = this.previousElementSibling.previousElementSibling;
 
-	for (var i = 0; i < serviceButton.length; i++) {
-		serviceButton[i].addEventListener('click', serviceHandler);
-	}
-	// $servicebottom.click(function(e){
-	// 	var $servicebox = $(this).siblings('.service-box');
-	// 	e.preventDefault();
-	// 	$servicebox.fadeToggle();
-	// });
-
+			if (servicebox.classList.contains('is-faded')) {
+				servicebox.classList.remove('is-faded');
+			}else {
+				servicebox.classList.add('is-faded');
+			}
+		})
+	})
 
 	function closePanel(e) {
 		e.preventDefault();
@@ -206,39 +201,5 @@ $(document).ready(function(){
 	if( $('.floating-labels').length > 0 ) {
 		floatLabels();
 	}
-
-	//AJAX form submission
-
-	// $form.submit(function(e) {
-  //   e.preventDefault();
-	//
-	// 	var formData = {
-	// 		name: $('.name').val(),
-	// 		number: $('.tel').val(),
-	// 		email: $('.email').val(),
-	// 		message: $('.message').val()
-	// 	};
-	//
-	//
-	// 	var formURL = $form.attr('action');
-	// 	console.log(formURL);
-	// 	console.log(formData);
-	//
-  //   $.ajax({
-	// 		type: 'POST',
-	// 		url: formURL,
-	// 		data:	JSON.stringify(formData),
-	// 		contentType:	'application/json'
-	// 	}).done(function(data){
-	// 		console.log('success:');
-	// 		console.log(data);
-	// 	}).fail(function(data){
-	// 		console.log('error:' + data);
-	// 	});
-	//
-	//
-	//
-	// });
-
 
 });

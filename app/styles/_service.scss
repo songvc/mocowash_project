@@ -1,8 +1,6 @@
 .service {
 	background-color: rgb(221, 225, 230);
 	background-image: url(../images/jumbo-picture.png);
-	background-position: center;
-	background-size: contain no-repeat;
 	background-position: right;
 }
 
@@ -22,7 +20,6 @@
 		background-clip: padding-box;
 		border-radius: .25em .25em .25em .25em;
 
-
     h2 {
       white-space: nowrap;
       font-size:1.5em;
@@ -38,30 +35,28 @@
     .service-bottom {
       position:absolute;
       bottom:0px;
-      left:0px;
       height:50px;
       width:100%;
       color:white;
 			font-weight:bold;
-			font-family: arial;
 			text-transform: uppercase;
 			text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-      letter-spacing: 0.05em;
-      font-size:1.0em;
       padding:15px 0px;
       background-color: $blue;
-      border-radius: 0em 0em .25em .25em;
+			z-index:3;
+      border-radius: 0em 0em .2em .2em;
       cursor:pointer;
     }
 
     .service-price {
 			position:absolute;
       width:100%;
-      height:330px;
+      height:inherit;
+			background-color: white;
       top:0;
       left:0;
       cursor:pointer;
-			border-radius:inherit;
+			border-radius: inherit;
 
       h4 {
         font-size:1em;
@@ -82,9 +77,12 @@
 	border-radius: inherit;
 	position:absolute;
 	z-index:2;
-	height:80%;
+	height:100%;
 	background-color: white;
   padding:20px;
+	opacity:1;
+	transition: opacity 0.5s;
+	
   svg {
     margin:15px 0px;
     width:100%;
@@ -95,9 +93,16 @@
   }
 }
 
+.service-box.is-faded {
+	opacity:0;
+}
+
+
+
+
 @media (min-width: $small-screen-size) {
 	.service {
-		background-position: center;
+		background-position: right center;
 	}
 
   .service-container {
@@ -112,6 +117,9 @@
 }
 
 @media (min-width: $medium-screen-size) {
+	.service {
+		background-position: 100% 100%;
+	}
   .service-container {
     padding:5px;
     section {
@@ -135,4 +143,10 @@
 			}
     }
   }
+}
+
+@media (min-width: 100em) {
+	.service {
+		background-size:cover;
+	}
 }
