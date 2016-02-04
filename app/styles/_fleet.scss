@@ -11,8 +11,9 @@
     position:relative;
     padding:10px;
     text-align: center;
-    margin:5px;
+    margin:15px;
     flex: 1;
+    border: white 3px solid;
     background-color:#57B846;
     h3 {
       color:white;
@@ -34,10 +35,10 @@
     }
 
     .fleet-image {
-      background-image: url("../images/fleet-picture-1.png");
+      background-image: url("../images/fleet-picture-2.png");
     }
     .fleet-image2 {
-      background-image: url("../images/fleet-picture-2.png");
+      background-image: url("../images/fleet-picture-1.png");
     }
 
   }
@@ -48,6 +49,8 @@
     flex-flow: row wrap;
     section {
       flex: 1 0 48%;
+      margin:5px;
+
     }
   }
 }
