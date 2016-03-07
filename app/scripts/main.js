@@ -193,7 +193,7 @@ var websiteManager = (function(){
 
 	var publicAPI = {
 		init: init
-	}
+	};
 
 	return publicAPI;
 })();
